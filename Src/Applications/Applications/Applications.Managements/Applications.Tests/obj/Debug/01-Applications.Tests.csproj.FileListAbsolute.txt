@@ -1,0 +1,5 @@
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\TestBin\Applications.Tests.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\TestBin\Applications.Tests.pdb
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Tests\obj\Debug\01-Applications.Tests.csprojResolveAssemblyReference.cache
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Tests\obj\Debug\Applications.Tests.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Tests\obj\Debug\Applications.Tests.pdb

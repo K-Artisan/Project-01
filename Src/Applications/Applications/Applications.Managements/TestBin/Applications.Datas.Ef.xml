@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Applications.Datas.Ef</name>
+    </assembly>
+    <members>
+        <member name="T:Applications.Datas.Ef.ApplicationUnitOfWork">
+            <summary>
+            应用程序工作单元
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.ApplicationUnitOfWork.#cctor">
+            <summary>
+            初始化应用程序工作单元
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.ApplicationUnitOfWork.#ctor">
+            <summary>
+            初始化应用程序工作单元
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Ef.Mappings.AddressMap">
+            <summary>
+            地址映射
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.AddressMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Ef.Mappings.Systems.ApplicationMap">
+            <summary>
+            应用程序映射
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Systems.ApplicationMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Systems.ApplicationMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Systems.ApplicationMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Ef.Mappings.Commons.AreaMap">
+            <summary>
+            地区映射
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Commons.AreaMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Commons.AreaMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Commons.AreaMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Ef.Mappings.Commons.DicMap">
+            <summary>
+            字典映射
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Commons.DicMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Commons.DicMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Ef.Mappings.Commons.IconCategoryMap">
+            <summary>
+            图标分类映射
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Commons.IconCategoryMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Commons.IconCategoryMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Commons.IconCategoryMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Ef.Mappings.Commons.IconMap">
+            <summary>
+            图标映射
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Commons.IconMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Commons.IconMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Commons.IconMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Ef.Mappings.Systems.ResourceMap">
+            <summary>
+            资源映射
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Systems.ResourceMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Systems.ResourceMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Systems.ResourceMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Ef.Mappings.Configs.SystemConfigCategoryMap">
+            <summary>
+            系统配置分类映射
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Configs.SystemConfigCategoryMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Configs.SystemConfigCategoryMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Configs.SystemConfigCategoryMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Ef.Mappings.Configs.SystemConfigMap">
+            <summary>
+            系统配置映射
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Configs.SystemConfigMap.MapTable">
+            <summary>
+            映射表
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Configs.SystemConfigMap.MapProperties">
+            <summary>
+            映射属性
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Mappings.Configs.SystemConfigMap.MapAssociations">
+            <summary>
+            映射导航属性
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Ef.Repositories.Commons.AreaRepository">
+            <summary>
+            地区仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Datas.Ef.Repositories.RepositoryBase`1">
+            <summary>
+            基仓储
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+        </member>
+        <member name="M:Applications.Datas.Ef.Repositories.RepositoryBase`1.#ctor(Applications.IApplicationUnitOfWork)">
+            <summary>
+            初始化仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Ef.Repositories.Commons.AreaRepository.#ctor(Applications.IApplicationUnitOfWork)">
+            <summary>
+            初始化地区仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Ef.Repositories.Commons.DicRepository">
+            <summary>
+            字典仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Repositories.Commons.DicRepository.#ctor(Applications.IApplicationUnitOfWork)">
+            <summary>
+            初始化字典仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Ef.Repositories.Commons.DicRepository.GetDic(System.String,System.Nullable{System.Guid})">
+            <summary>
+            根据编码获取字典
+            </summary>
+            <param name="code">字典编码</param>
+            <param name="tenantId">租户编号</param>
+        </member>
+        <member name="T:Applications.Datas.Ef.Repositories.Commons.IconCategoryRepository">
+            <summary>
+            图标分类仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Repositories.Commons.IconCategoryRepository.#ctor(Applications.IApplicationUnitOfWork)">
+            <summary>
+            初始化图标分类仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Ef.Repositories.Commons.IconRepository">
+            <summary>
+            图标仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Repositories.Commons.IconRepository.#ctor(Applications.IApplicationUnitOfWork)">
+            <summary>
+            初始化图标仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Ef.Repositories.Configs.SystemConfigCategoryRepository">
+            <summary>
+            系统配置分类仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Repositories.Configs.SystemConfigCategoryRepository.#ctor(Applications.IApplicationUnitOfWork)">
+            <summary>
+            初始化系统配置分类仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Ef.Repositories.Configs.SystemConfigRepository">
+            <summary>
+            系统配置仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Repositories.Configs.SystemConfigRepository.#ctor(Applications.IApplicationUnitOfWork)">
+            <summary>
+            初始化系统配置仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="T:Applications.Datas.Ef.Repositories.Systems.ApplicationRepository">
+            <summary>
+            应用程序仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Repositories.Systems.ApplicationRepository.#ctor(Applications.IApplicationUnitOfWork,Util.Datas.Sql.Queries.ISqlQuery)">
+            <summary>
+            初始化应用程序仓储
+            </summary>
+            <param name="unitOfWork">安全工作单元</param>
+            <param name="sqlQuery">Sql查询对象</param>
+        </member>
+        <member name="F:Applications.Datas.Ef.Repositories.Systems.ApplicationRepository._sqlQuery">
+            <summary>
+            Sql查询对象
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Repositories.Systems.ApplicationRepository.Query(Applications.Domains.Security.Queries.ApplicationQuery)">
+            <summary>
+            查询
+            </summary>
+            <param name="query">查询实体</param>
+        </member>
+        <member name="T:Applications.Datas.Ef.Repositories.Systems.ResourceRepository">
+            <summary>
+            资源仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Datas.Ef.Repositories.Systems.ResourceRepository.#ctor(Applications.IApplicationUnitOfWork)">
+            <summary>
+            初始化资源仓储
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Applications.Datas.Ef.Repositories.Systems.ResourceRepository.GetModules">
+            <summary>
+            获取应用程序的全部模块
+            </summary>
+        </member>
+    </members>
+</doc>

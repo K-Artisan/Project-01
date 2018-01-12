@@ -1,0 +1,11 @@
+D:\Yun\Applications\Release\Biz.Domains.Configs.xml
+D:\Yun\Applications\Release\Biz.Domains.Configs.dll
+D:\Yun\Applications\Release\Biz.Domains.Configs.pdb
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Domains.Configs.XML
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Domains.Configs.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Domains.Configs.pdb
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Configs\obj\Debug\03-Applications.Domains.Configs.csprojResolveAssemblyReference.cache
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Configs\obj\Debug\Applications.Domains.Configs.ConfigResource.resources
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Configs\obj\Debug\03-Applications.Domains.Configs.csproj.GenerateResource.Cache
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Configs\obj\Debug\Applications.Domains.Configs.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Configs\obj\Debug\Applications.Domains.Configs.pdb

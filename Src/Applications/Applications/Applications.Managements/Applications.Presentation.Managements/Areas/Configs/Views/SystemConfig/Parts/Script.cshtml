@@ -1,0 +1,22 @@
+﻿<script type="text/javascript">
+    //刷新配置面板
+    function refreshConfigPanel(categoryId) {
+        categoryId = $.isObject(categoryId) ? "" : categoryId;
+        $.easyui.refreshPanel("panelConfig", "/configs/systemConfig/configPanel?categoryId=" + categoryId);
+    }
+
+    //保存配置分类完成
+    function saveCategorySuccess(categoryId) {
+        return function() {
+            refreshConfigPanel(categoryId);
+        };
+    }
+
+    //验证分类是否已选中
+    function validateCategoryId() {
+        if (!$.isEmpty($("#CategoryId").val()))
+            return true;
+        $.easyui.warn("请选择配置分类");
+        return false;
+    }
+</script>

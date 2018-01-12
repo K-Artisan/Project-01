@@ -1,0 +1,5 @@
+D:\Book\Action\Util\Framework\TestBin\Util.Security.Tests.dll
+D:\Book\Action\Util\Framework\TestBin\Util.Security.Tests.pdb
+D:\Book\Action\Util\Framework\Util\Util.Security.Tests\obj\Debug\03-Util.Security.Tests.csprojResolveAssemblyReference.cache
+D:\Book\Action\Util\Framework\Util\Util.Security.Tests\obj\Debug\Util.Security.Tests.dll
+D:\Book\Action\Util\Framework\Util\Util.Security.Tests\obj\Debug\Util.Security.Tests.pdb

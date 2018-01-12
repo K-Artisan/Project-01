@@ -1,0 +1,20 @@
+﻿@model IconDto
+@{
+    var x = @Html.EasyUi();
+}
+@section head {
+    @*js脚本*@
+    @Html.Partial( "Parts/Script" )
+}
+@section content {
+    @using ( x.Layout( true ).Begin() ) {
+        @*图标分类面板*@
+        using ( x.Panel().Left().Split().Title( "图标分类管理" ).AddClass( "content" ).MinWidth( 200 ).MaxWidth( 500 ).Begin() ) {
+            @Html.Partial( "Parts/Categories" )
+        }
+        @*图标面板*@
+        using ( @x.Panel().Id( "panelIcon" ).Center().Title( "图标管理" ).AddClass( "content" ).Begin() ) {
+            @Html.Partial( "Parts/Icon" )
+        }
+    }
+}

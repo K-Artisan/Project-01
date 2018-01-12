@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BBAA7116-2559-4212-9CA2-C79F7D203B88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Applications.Datas.Ef</RootNamespace>
+    <AssemblyName>Applications.Datas.Ef</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Release\Applications.Datas.Ef.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Release\Applications.Datas.Ef.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationUnitOfWork.cs" />
+    <Compile Include="Mappings\AddressMap.cs" />
+    <Compile Include="Mappings\Systems\ApplicationMap.cs" />
+    <Compile Include="Mappings\Commons\AreaMap.cs" />
+    <Compile Include="Mappings\Commons\DicMap.cs" />
+    <Compile Include="Mappings\Commons\IconCategoryMap.cs" />
+    <Compile Include="Mappings\Commons\IconMap.cs" />
+    <Compile Include="Mappings\Systems\ResourceMap.cs" />
+    <Compile Include="Mappings\Configs\SystemConfigCategoryMap.cs" />
+    <Compile Include="Mappings\Configs\SystemConfigMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Commons\AreaRepository.cs" />
+    <Compile Include="Repositories\Commons\DicRepository.cs" />
+    <Compile Include="Repositories\Commons\IconCategoryRepository.cs" />
+    <Compile Include="Repositories\Commons\IconRepository.cs" />
+    <Compile Include="Repositories\RepositoryBase.cs" />
+    <Compile Include="Repositories\Configs\SystemConfigCategoryRepository.cs" />
+    <Compile Include="Repositories\Configs\SystemConfigRepository.cs" />
+    <Compile Include="Repositories\Systems\ApplicationRepository.cs" />
+    <Compile Include="Repositories\Systems\ResourceRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Datas.Ef\03-Util.Datas.Ef.csproj">
+      <Project>{da4712ee-1e4f-4792-8ed5-e17c17c6ce73}</Project>
+      <Name>03-Util.Datas.Ef</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Datas.SqlServer\04-Util.Datas.SqlServer.csproj">
+      <Project>{ef0514a0-339c-4846-a3d6-5f41f3c2dc31}</Project>
+      <Name>04-Util.Datas.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Datas.Sql\02-Util.Datas.Sql.csproj">
+      <Project>{f43f7230-2cf2-4f5d-a668-a116771a6e2c}</Project>
+      <Name>02-Util.Datas.Sql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Datas\01-Util.Datas.csproj">
+      <Project>{c4b929b6-117b-4c6f-a92b-eeb07309bee5}</Project>
+      <Name>01-Util.Datas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Domains\Util.Domains.csproj">
+      <Project>{69edfba0-f39e-421b-9949-253f8b269b22}</Project>
+      <Name>Util.Domains</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Security\Util.Security.csproj">
+      <Project>{a0f4b251-cce2-4f7d-afc1-37651d8a131f}</Project>
+      <Name>Util.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util\Util.Core.csproj">
+      <Project>{eece9b01-394b-4b1a-964a-6d9dcef14fa2}</Project>
+      <Name>Util.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Commons\02-Applications.Domains.Commons.csproj">
+      <Project>{809e0858-ed75-4eb8-b235-1a9eff66a9af}</Project>
+      <Name>02-Applications.Domains.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Configs\03-Applications.Domains.Configs.csproj">
+      <Project>{87038014-90bd-4bf0-9892-90186bbcbd5d}</Project>
+      <Name>03-Applications.Domains.Configs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Core\01-Applications.Domains.Core.csproj">
+      <Project>{f6fcd8cf-cc16-42c4-bb3b-5a7fe0b7cbe5}</Project>
+      <Name>01-Applications.Domains.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Security\04-Applications.Domains.Security.csproj">
+      <Project>{9542cda4-4c33-4545-8633-4e95aaaa3b77}</Project>
+      <Name>04-Applications.Domains.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Infrastructure.Core\01-Applications.Infrastructure.Core.csproj">
+      <Project>{528942ac-5c99-4457-a0c6-7574db55cf1d}</Project>
+      <Name>01-Applications.Infrastructure.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="说明.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

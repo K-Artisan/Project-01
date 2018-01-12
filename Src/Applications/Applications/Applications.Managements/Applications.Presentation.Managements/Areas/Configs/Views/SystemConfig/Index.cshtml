@@ -1,0 +1,20 @@
+﻿@model SystemConfigDto
+@{
+    var x = @Html.EasyUi();
+}
+@section head {
+    @*js脚本*@
+    @Html.Partial( "Parts/Script" )
+}
+@section content {
+    @using ( x.Layout( true ).Begin() ) {
+        @*分类面板*@
+        using ( @x.Panel().Left().Split().Title( "系统配置分类管理" ).AddClass( "content" ).MinWidth( 200 ).MaxWidth( 500 ).Begin() ) {
+            @Html.Partial( "Parts/Categories" )
+        }
+        @*配置面板*@
+        using ( @x.Panel().Id( "panelConfig" ).Center().Title( "系统配置管理" ).AddClass( "content" ).Begin() ) {
+            @Html.Partial( "Parts/Config" )
+        }
+    }
+}

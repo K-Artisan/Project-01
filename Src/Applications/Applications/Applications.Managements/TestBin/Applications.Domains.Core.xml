@@ -1,0 +1,725 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Applications.Domains.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Applications.Domains.Core.ApplicationContext">
+            <summary>
+            应用程序上下文
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Core.IApplicationContext">
+            <summary>
+            应用程序上下文
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.IApplicationContext.ApplicationId">
+            <summary>
+            应用程序编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.IApplicationContext.ApplicationCode">
+            <summary>
+            应用程序编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.IApplicationContext.Application">
+            <summary>
+            应用程序名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.IApplicationContext.TenantId">
+            <summary>
+            租户编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.IApplicationContext.TenantCode">
+            <summary>
+            租户编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.IApplicationContext.Tenant">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.IApplicationContext.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.IApplicationContext.FullName">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.IApplicationContext.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.IApplicationContext.Skin">
+            <summary>
+            皮肤
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.IApplicationContext.MenuStyle">
+            <summary>
+            菜单样式
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.ApplicationContext.#ctor">
+            <summary>
+            初始化应用程序上下文
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.ApplicationContext._identity">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.ApplicationContext.ApplicationId">
+            <summary>
+            应用程序编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.ApplicationContext.ApplicationCode">
+            <summary>
+            应用程序编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.ApplicationContext.Application">
+            <summary>
+            应用程序名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.ApplicationContext.TenantId">
+            <summary>
+            租户编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.ApplicationContext.TenantCode">
+            <summary>
+            租户编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.ApplicationContext.Tenant">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.ApplicationContext.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.ApplicationContext.FullName">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.ApplicationContext.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.ApplicationContext.Skin">
+            <summary>
+            皮肤
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.ApplicationContext.MenuStyle">
+            <summary>
+            菜单样式
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Core.Contracts.ISiteManager">
+            <summary>
+            站点管理器
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.Contracts.ISiteManager.GetSkins">
+            <summary>
+            获取皮肤列表
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.Contracts.ISiteManager.GetMenuStyles">
+            <summary>
+            获取菜单样式列表
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.Contracts.ISiteManager.GetSkinDescription(System.String)">
+            <summary>
+            获取皮肤描述
+            </summary>
+            <param name="skin">皮肤</param>
+        </member>
+        <member name="M:Applications.Domains.Core.Contracts.ISiteManager.GetMenuStyleDescription(System.String)">
+            <summary>
+            获取菜单样式描述
+            </summary>
+            <param name="style">菜单样式</param>
+        </member>
+        <member name="M:Applications.Domains.Core.Contracts.ISiteManager.GetSkin">
+            <summary>
+            获取皮肤
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Core.Enums.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Gender.Female">
+            <summary>
+            女
+            </summary>        
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Gender.Male">
+            <summary>
+            男
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Core.Enums.GenderExtensions">
+            <summary>
+            性别枚举扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.Enums.GenderExtensions.Description(System.Nullable{Applications.Domains.Core.Enums.Gender})">
+            <summary>
+            获取描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.Enums.GenderExtensions.Value(System.Nullable{Applications.Domains.Core.Enums.Gender})">
+            <summary>
+            获取值
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Core.Enums.Nation">
+            <summary>
+            民族
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Hz">
+            <summary>
+            汉族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Mgz">
+            <summary>
+            蒙古族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.HuiZ">
+            <summary>
+            回族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Zz">
+            <summary>
+            藏族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Wwez">
+            <summary>
+            维吾尔族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Mz">
+            <summary>
+            苗族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Yz">
+            <summary>
+            彝族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.ZhuangZ">
+            <summary>
+            壮族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Byz">
+            <summary>
+            布依族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Cxz">
+            <summary>
+            朝鲜族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.ManZ">
+            <summary>
+            满族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Tz">
+            <summary>
+            侗族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.YaoZ">
+            <summary>
+            瑶族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Bz">
+            <summary>
+            白族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Tjz">
+            <summary>
+            土家族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Hnz">
+            <summary>
+            哈尼族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Hskz">
+            <summary>
+            哈萨克族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Dz">
+            <summary>
+            傣族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Lz">
+            <summary>
+            黎族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Lsz">
+            <summary>
+            傈僳族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Wz">
+            <summary>
+            佤族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Sz">
+            <summary>
+            畲族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Gsz">
+            <summary>
+            高山族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Lhz">
+            <summary>
+            拉祜族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.ShuiZ">
+            <summary>
+            水族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Dxz">
+            <summary>
+            东乡族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Nxz">
+            <summary>
+            纳西族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Jpz">
+            <summary>
+            景颇族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Kekzz">
+            <summary>
+            柯尔克孜族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.TuZ">
+            <summary>
+            土族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Dwez">
+            <summary>
+            达斡尔族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Mlz">
+            <summary>
+            仫佬族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Qz">
+            <summary>
+            羌族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Blz">
+            <summary>
+            布朗族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Slz">
+            <summary>
+            撒拉族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Mnz">
+            <summary>
+            毛南族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Ylz">
+            <summary>
+            仡佬族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Xbz">
+            <summary>
+            锡伯族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Acz">
+            <summary>
+            阿昌族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Pmz">
+            <summary>
+            普米族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Tjkz">
+            <summary>
+            塔吉克族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Nz">
+            <summary>
+            怒族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Wzbkz">
+            <summary>
+            乌孜别克族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Elsz">
+            <summary>
+            俄罗斯族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Ewkz">
+            <summary>
+            鄂温克族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Daz">
+            <summary>
+            德昂族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Baz">
+            <summary>
+            保安族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Ygz">
+            <summary>
+            裕固族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Jz">
+            <summary>
+            京族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Ttrz">
+            <summary>
+            塔塔尔族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Dlz">
+            <summary>
+            独龙族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Elcz">
+            <summary>
+            鄂伦春族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Hzz">
+            <summary>
+            赫哲族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Mbz">
+            <summary>
+            门巴族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Lbz">
+            <summary>
+            珞巴族        
+            </summary>
+        </member>
+        <member name="F:Applications.Domains.Core.Enums.Nation.Jnz">
+            <summary>
+            基诺族        
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Core.Enums.NationExtensions">
+            <summary>
+            民族枚举扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.Enums.NationExtensions.Description(System.Nullable{Applications.Domains.Core.Enums.Nation})">
+            <summary>
+            获取描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.Enums.NationExtensions.Value(System.Nullable{Applications.Domains.Core.Enums.Nation})">
+            <summary>
+            获取值
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Core.Infos.AddressInfoExtension">
+            <summary>
+            地址信息扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.Infos.AddressInfoExtension.ToAddress(Applications.Domains.Core.Infos.AddressInfo)">
+            <summary>
+            转换为地址
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.Infos.AddressInfoExtension.ToInfo(Applications.Domains.Core.Models.Address)">
+            <summary>
+            转换为地址信息
+            </summary>
+            <param name="address">地址</param>
+        </member>
+        <member name="T:Applications.Domains.Core.Models.Address">
+            <summary>
+            地址 - 不可变
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.Models.Address.#ctor">
+            <summary>
+            初始化地址
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.Models.Address.#ctor(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            初始化地址
+            </summary>
+            <param name="provinceId">省份编号</param>
+            <param name="cityId">城市编号</param>
+            <param name="countyId">区县编号</param>
+            <param name="province">省份</param>
+            <param name="city">城市</param>
+            <param name="county">区县</param>
+            <param name="street">街道</param>
+            <param name="zip">邮政编码</param>
+        </member>
+        <member name="M:Applications.Domains.Core.Models.Address.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Models.Address.ProvinceId">
+            <summary>
+            省份编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Models.Address.CityId">
+            <summary>
+            城市编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Models.Address.CountyId">
+            <summary>
+            区县编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Models.Address.Province">
+            <summary>
+            省份
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Models.Address.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Models.Address.County">
+            <summary>
+            区县
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Models.Address.Street">
+            <summary>
+            街道
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Models.Address.Zip">
+            <summary>
+            邮政编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Models.Address.Description">
+            <summary>
+            地址描述
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Models.Address.Null">
+            <summary>
+            空地址
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Core.Models.NullAddress">
+            <summary>
+            空地址
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.Models.NullAddress.IsNull">
+            <summary>
+            是否空对象
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Core.Infos.AddressInfo">
+            <summary>
+            地址信息 - 可变
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Infos.AddressInfo.ProvinceId">
+            <summary>
+            省份编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Infos.AddressInfo.CityId">
+            <summary>
+            城市编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Infos.AddressInfo.CountyId">
+            <summary>
+            区县编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Infos.AddressInfo.Province">
+            <summary>
+            省份
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Infos.AddressInfo.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Infos.AddressInfo.County">
+            <summary>
+            区县
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Infos.AddressInfo.Street">
+            <summary>
+            街道
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Infos.AddressInfo.Zip">
+            <summary>
+            邮政编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.Infos.AddressInfo.Description">
+            <summary>
+            地址描述
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Core.Models.Url">
+            <summary>
+            Url
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.Models.Url.#ctor(System.String)">
+            <summary>
+            初始化Url
+            </summary>
+            <param name="url">Url</param>
+        </member>
+        <member name="P:Applications.Domains.Core.Models.Url.Value">
+            <summary>
+            Url值
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Core.TenantAggregateRoot">
+            <summary>
+            租户聚合根
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.TenantAggregateRoot.#ctor(System.Guid)">
+            <summary>
+            初始化租户聚合根
+            </summary>
+            <param name="id">标识</param>
+        </member>
+        <member name="M:Applications.Domains.Core.TenantAggregateRoot.GetTenantId">
+            <summary>
+            获取当前租户编号
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.TenantAggregateRoot.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.TenantAggregateRoot.TenantId">
+            <summary>
+            租户编号
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Core.TenantTreeAggregateRoot`1">
+            <summary>
+            租户树型聚合根
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+        </member>
+        <member name="M:Applications.Domains.Core.TenantTreeAggregateRoot`1.#ctor(System.Guid,System.String,System.Int32)">
+            <summary>
+            初始化字典
+            </summary>
+            <param name="id">标识</param>
+            <param name="path">路径</param>
+            <param name="level">级数</param>
+        </member>
+        <member name="M:Applications.Domains.Core.TenantTreeAggregateRoot`1.GetTenantId">
+            <summary>
+            获取当前租户编号
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Core.TenantTreeAggregateRoot`1.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Core.TenantTreeAggregateRoot`1.TenantId">
+            <summary>
+            租户编号
+            </summary>
+        </member>
+    </members>
+</doc>

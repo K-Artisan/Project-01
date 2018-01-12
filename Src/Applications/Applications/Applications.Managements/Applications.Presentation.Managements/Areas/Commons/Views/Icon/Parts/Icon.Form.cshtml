@@ -1,0 +1,12 @@
+﻿@using Util.Uploaders.WebUploader
+@model IconDto
+@{
+    var x = Html.EasyUi();
+}
+
+@*js脚本*@
+@Html.Partial( "Parts/Script" )
+@*上传控件*@
+@Html.Uploader().Images( "/commons/icon/upload" ).Thumb( 32, 32 ).Limit( 5000,2000 ).FormData( new { categoryId = Model.CategoryId } ).OnFinish( string.Format( "uploadFinish('{0}')",Model.CategoryId ) )
+@*关闭按钮*@
+@Html.Partial( "Commons/CloseDialogButton" )

@@ -1,0 +1,17 @@
+﻿@model ResourceQuery
+@{
+    var x = @Html.EasyUi();
+}
+<div id="divQuery" class="divQueryForm">
+    @using ( x.Form( "formQuery" ).AddClass( "form" ).Begin() ) {
+        <dl>
+            <dt>@Html.LabelFor( t => t.ApplicationId )</dt>
+            <dd>
+                @x.TextBox( t => t.ApplicationId )
+            </dd>
+        </dl>
+        <span class="button">
+            @x.Button( "查 询" ).Width( 70 ).Icon( "icon-search" ).QueryByTreeGrid()
+        </span>
+    }
+</div>

@@ -1,0 +1,6 @@
+D:\Yun\Applications\Applications.Managements\EasyUi\Applications.Datas.Ef\obj\Debug\Applications.Datas.Ef.csprojResolveAssemblyReference.cache
+D:\Yun\Applications\Applications.Managements\EasyUi\Release\Applications.Datas.Ef.XML
+D:\Yun\Applications\Applications.Managements\EasyUi\Release\Applications.Datas.Ef.dll
+D:\Yun\Applications\Applications.Managements\EasyUi\Release\Applications.Datas.Ef.pdb
+D:\Yun\Applications\Applications.Managements\EasyUi\Applications.Datas.Ef\obj\Debug\Applications.Datas.Ef.dll
+D:\Yun\Applications\Applications.Managements\EasyUi\Applications.Datas.Ef\obj\Debug\Applications.Datas.Ef.pdb

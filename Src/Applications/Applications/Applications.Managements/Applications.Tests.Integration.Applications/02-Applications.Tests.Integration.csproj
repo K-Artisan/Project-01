@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0827966-2531-43E7-B67C-B0E86EB06454}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Applications.Tests.Integration</RootNamespace>
+    <AssemblyName>Applications.Tests.Integration</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\TestBin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\TestBin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\Release\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="Util.ApplicationServices">
+      <HintPath>..\Release\Util.ApplicationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\Util.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Datas">
+      <HintPath>..\Release\Util.Datas.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Datas.Ef">
+      <HintPath>..\Release\Util.Datas.Ef.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Datas.Sql">
+      <HintPath>..\Release\Util.Datas.Sql.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Datas.SqlServer">
+      <HintPath>..\Release\Util.Datas.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.DI.Autofac">
+      <HintPath>..\Release\Util.DI.Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Domains, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\Util.Domains.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Offices.Npoi">
+      <HintPath>..\Release\Util.Offices.Npoi.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Webs">
+      <HintPath>..\Release\Util.Webs.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Webs.EasyUi">
+      <HintPath>..\Release\Util.Webs.EasyUi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Configs\ApplicationConfig.cs" />
+    <Compile Include="Dtos\Commons\AreaDtoTest.cs" />
+    <Compile Include="Dtos\Commons\DicDtoTest.cs" />
+    <Compile Include="Dtos\Commons\IconCategoryDtoTest.cs" />
+    <Compile Include="Dtos\Commons\IconDtoTest.cs" />
+    <Compile Include="Dtos\Commons\SystemConfigCategoryDtoTest.cs" />
+    <Compile Include="Dtos\Commons\SystemConfigDtoTest.cs" />
+    <Compile Include="Dtos\Security\ApplicationDtoTest.cs" />
+    <Compile Include="Dtos\Security\ResourceDtoTest.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Security\ApplicationServiceTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Applications.Datas.Ef\02-Applications.Datas.Ef.csproj">
+      <Project>{bbaa7116-2559-4212-9ca2-c79f7d203b88}</Project>
+      <Name>02-Applications.Datas.Ef</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Commons\02-Applications.Domains.Commons.csproj">
+      <Project>{809e0858-ed75-4eb8-b235-1a9eff66a9af}</Project>
+      <Name>02-Applications.Domains.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Configs\03-Applications.Domains.Configs.csproj">
+      <Project>{87038014-90bd-4bf0-9892-90186bbcbd5d}</Project>
+      <Name>03-Applications.Domains.Configs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Core\01-Applications.Domains.Core.csproj">
+      <Project>{f6fcd8cf-cc16-42c4-bb3b-5a7fe0b7cbe5}</Project>
+      <Name>01-Applications.Domains.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Security\04-Applications.Domains.Security.csproj">
+      <Project>{9542cda4-4c33-4545-8633-4e95aaaa3b77}</Project>
+      <Name>04-Applications.Domains.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Systems\05-Applications.Domains.Systems.csproj">
+      <Project>{8b145f1f-7e36-4b8f-80b0-f10ce7fa0115}</Project>
+      <Name>05-Applications.Domains.Systems</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Infrastructure.Core\01-Applications.Infrastructure.Core.csproj">
+      <Project>{528942ac-5c99-4457-a0c6-7574db55cf1d}</Project>
+      <Name>01-Applications.Infrastructure.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Services\Applications.Services.csproj">
+      <Project>{061c28b8-8a89-440f-b908-71fcecf835dc}</Project>
+      <Name>Applications.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Tests\01-Applications.Tests.csproj">
+      <Project>{bd11d5d5-4297-429d-a5a0-377aac229c61}</Project>
+      <Name>01-Applications.Tests</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="说明.txt" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

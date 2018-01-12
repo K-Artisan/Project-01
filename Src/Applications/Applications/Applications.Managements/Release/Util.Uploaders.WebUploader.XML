@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Util.Uploaders.WebUploader</name>
+    </assembly>
+    <members>
+        <member name="T:Util.Uploaders.WebUploader.Configs.Option">
+            <summary>
+            WebUploader初始化配置
+            </summary>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.Configs.Option.ToString">
+            <summary>
+            输出Json结果
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.Name">
+            <summary>
+            指定控件名称
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.Dnd">
+            <summary>
+            指定拖拽的容器选择器
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.DisableGlobalDnd">
+            <summary>
+            是否禁掉整个页面的拖拽功能，如果不禁用，图片拖进来的时候会默认被浏览器打开
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.Pick">
+            <summary>
+            选择文件的按钮容器
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.Auto">
+            <summary>
+            自动上传
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.Server">
+            <summary>
+            文件接收服务端
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.FileQueued">
+            <summary>
+            文件加入队列事件
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.UploadProgress">
+            <summary>
+            上传进度事件
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.TotalFileNumber">
+            <summary>
+            上传的最大文件个数
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.TotalFileSize">
+            <summary>
+            上传的最大总容量
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.SingleFileSize">
+            <summary>
+            上传单个文件的最大容量
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.ThumbnailWidth">
+            <summary>
+            缩略图宽度
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.ThumbnailHeight">
+            <summary>
+            缩略图高度
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.FormData">
+            <summary>
+            表单数据
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.Option.UploadFinished">
+            <summary>
+            所有文件上传结束事件
+            </summary>
+        </member>
+        <member name="T:Util.Uploaders.WebUploader.Configs.PickOption">
+            <summary>
+            选择文件的按钮容器配置项
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.PickOption.Id">
+            <summary>
+            指定选择文件的按钮容器Id
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.PickOption.InnerHtml">
+            <summary>
+            指定选择文件的按钮Html
+            </summary>
+        </member>
+        <member name="P:Util.Uploaders.WebUploader.Configs.PickOption.Multiple">
+            <summary>
+            是否允许多选
+            </summary>
+        </member>
+        <member name="T:Util.Uploaders.WebUploader.HtmlHelperExtentions">
+            <summary>
+            HtmlHelper扩展 - 上传扩展
+            </summary>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.HtmlHelperExtentions.Uploader(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            上传
+            </summary>
+        </member>
+        <member name="T:Util.Uploaders.WebUploader.IUploadImagesService">
+            <summary>
+            上传图片集合服务
+            </summary>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.IUploadImagesService.Limit(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置上传限制
+            </summary>
+            <param name="totalFileNumber">上传的最大文件个数，默认100</param>
+            <param name="totalFileSizeM">上传的最大总容量，单位：M,默认50M</param>
+            <param name="singleFileSizeK">上传单个文件的最大容量，单位：K,默认600K</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.IUploadImagesService.Url(System.String)">
+            <summary>
+            设置文件接收服务端
+            </summary>
+            <param name="url">文件接收服务端Url</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.IUploadImagesService.Thumb(System.Int32,System.Int32)">
+            <summary>
+            设置缩略图尺寸
+            </summary>
+            <param name="width">缩略图宽度</param>
+            <param name="height">缩略图高度</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.IUploadImagesService.FormData(System.Object)">
+            <summary>
+            设置发送的表单数据
+            </summary>
+            <param name="data">表单数据，一般为匿名对象，范例：{a=1}</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.IUploadImagesService.OnFinish(System.String)">
+            <summary>
+            设置所有文件上传结束事件处理函数
+            </summary>
+            <param name="handler">所有文件上传结束事件处理函数</param>
+        </member>
+        <member name="T:Util.Uploaders.WebUploader.IUploadService">
+            <summary>
+            上传服务
+            </summary>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.IUploadService.Images(System.String)">
+            <summary>
+            上传图片集合
+            </summary>
+            <param name="url">文件接收服务端Url</param>
+        </member>
+        <member name="T:Util.Uploaders.WebUploader.IWebUploader">
+            <summary>
+            上传控件
+            </summary>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.IWebUploader.Name(System.String)">
+            <summary>
+            指定控件名称
+            </summary>
+            <param name="name">控件名称，用于标识控件</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.IWebUploader.Html(System.String)">
+            <summary>
+            设置控件容器内部Html
+            </summary>
+            <param name="html">控件容器内部Html</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.IWebUploader.Pick(System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            指定选择文件的按钮容器
+            </summary>
+            <param name="id">选择文件按钮容器Id</param>
+            <param name="btnHtml">选择文件按钮的Html</param>
+            <param name="multiple">是否允许多选</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.IWebUploader.Server(System.String)">
+            <summary>
+            设置文件接收服务端Url
+            </summary>
+            <param name="url">文件接收服务端Url</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.IWebUploader.FileQueued(System.String)">
+            <summary>
+            设置文件加入队列事件处理函数
+            </summary>
+            <param name="handler">文件加入队列事件处理函数</param>
+        </member>
+        <member name="T:Util.Uploaders.WebUploader.Uploader">
+            <summary>
+            上传控件
+            </summary>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.Uploader.#ctor">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="F:Util.Uploaders.WebUploader.Uploader._html">
+            <summary>
+            Html
+            </summary>
+        </member>
+        <member name="F:Util.Uploaders.WebUploader.Uploader._option">
+            <summary>
+            配置项
+            </summary>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.Uploader.Name(System.String)">
+            <summary>
+            指定控件名称
+            </summary>
+            <param name="name">控件名称，用于标识控件</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.Uploader.Html(System.String)">
+            <summary>
+            设置控件容器内部Html
+            </summary>
+            <param name="html">控件容器内部Html</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.Uploader.Pick(System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            指定选择文件的按钮容器
+            </summary>
+            <param name="id">选择文件按钮容器Id</param>
+            <param name="btnHtml">选择文件按钮的Html</param>
+            <param name="multiple">是否允许多选</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.Uploader.Server(System.String)">
+            <summary>
+            设置文件接收服务端Url
+            </summary>
+            <param name="url">文件接收服务端Url</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.Uploader.FileQueued(System.String)">
+            <summary>
+            设置文件加入队列事件处理函数
+            </summary>
+            <param name="handler">文件加入队列事件处理函数</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.Uploader.ToString">
+            <summary>
+            输出结果
+            </summary>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.Uploader.ToHtmlString">
+            <summary>
+            输出结果
+            </summary>
+        </member>
+        <member name="T:Util.Uploaders.WebUploader.UploadImagesService">
+            <summary>
+            上传图片集合服务
+            </summary>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.UploadImagesService.#ctor(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            初始化上传图片集合服务
+            </summary>
+        </member>
+        <member name="F:Util.Uploaders.WebUploader.UploadImagesService._helper">
+            <summary>
+            HtmlHelper
+            </summary>
+        </member>
+        <member name="F:Util.Uploaders.WebUploader.UploadImagesService._option">
+            <summary>
+            上传图片集合配置项
+            </summary>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.UploadImagesService.Limit(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置上传限制
+            </summary>
+            <param name="totalFileNumber">上传的最大文件个数，默认100</param>
+            <param name="totalFileSizeM">上传的最大总容量，单位：M,默认50M</param>
+            <param name="singleFileSizeK">上传单个文件的最大容量，单位：K,默认600K</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.UploadImagesService.Url(System.String)">
+            <summary>
+            设置文件接收服务端
+            </summary>
+            <param name="url">文件接收服务端Url</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.UploadImagesService.Thumb(System.Int32,System.Int32)">
+            <summary>
+            设置缩略图尺寸
+            </summary>
+            <param name="width">缩略图宽度</param>
+            <param name="height">缩略图高度</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.UploadImagesService.FormData(System.Object)">
+            <summary>
+            设置发送的表单数据
+            </summary>
+            <param name="data">表单数据，一般为匿名对象，范例：{a=1}</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.UploadImagesService.OnFinish(System.String)">
+            <summary>
+            设置所有文件上传结束事件处理函数
+            </summary>
+            <param name="handler">所有文件上传结束事件处理函数</param>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.UploadImagesService.ToHtmlString">
+            <summary>
+            输出结果
+            </summary>
+        </member>
+        <member name="T:Util.Uploaders.WebUploader.UploadService">
+            <summary>
+            上传服务
+            </summary>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.UploadService.#ctor(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            初始化上传服务
+            </summary>
+        </member>
+        <member name="F:Util.Uploaders.WebUploader.UploadService._helper">
+            <summary>
+            HtmlHelper
+            </summary>
+        </member>
+        <member name="M:Util.Uploaders.WebUploader.UploadService.Images(System.String)">
+            <summary>
+            上传图片集合
+            </summary>
+            <param name="url">文件接收服务端Url</param>
+        </member>
+    </members>
+</doc>

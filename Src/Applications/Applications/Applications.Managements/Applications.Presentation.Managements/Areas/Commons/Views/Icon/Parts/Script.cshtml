@@ -1,0 +1,23 @@
+﻿<script type="text/javascript">
+    //刷新图标面板
+    function refreshIconPanel(categoryId) {
+        categoryId = $.isObject(categoryId) ? "" : categoryId;
+        $.easyui.refreshPanel("panelIcon", "/commons/icon/iconPanel?categoryId=" + categoryId);
+    }
+
+    //验证分类是否已选中
+    function validateCategoryId() {
+        if (!$.isEmpty($("#CategoryId").val()))
+            return true;
+        $.easyui.warn("请选择图标分类");
+        return false;
+    }
+
+    //上传完成
+    function uploadFinish(categoryId) {
+        return function() {
+            refreshIconPanel(categoryId);
+            $.easyui.closeDialog();
+        };
+    }
+</script>

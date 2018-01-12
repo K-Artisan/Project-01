@@ -1,0 +1,36 @@
+﻿<%@ Template Language="C#" TargetLanguage="C#" Debug="True" Encoding="UTF-8" %>
+
+<%@ Assembly Src="..\Common\Model.cs" %>
+<%@ Assembly Src="..\Common\Extensions.cs" %>
+
+<%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Text.RegularExpressions" %>
+<%@ Import Namespace="SchemaMapper" %>
+
+<%@ Property Name="Entity" Type="SchemaMapper.Entity"  %>
+<%-- Safe类名 --%>
+<% string SafeClassName = Entity.ClassName.ToSafeName(); %>
+<%-- 描述 --%>
+<% string Description = Entity.Description; %>
+@model <%= SafeClassName %>Dto
+
+<div class="divDetail">
+    <div class="detailTitle"><%= Description %>信息</div>
+    <div class="detailContent">
+    <% foreach(Property p in Entity.Properties) { %>
+        <% if( p.IsPrimaryKey.SafeValue() ) continue; %>
+        <% if( p.ColumnName == "Version" && p.DataType == DbType.Binary ) continue; %>
+        <dl>
+            <dt>@Html.LabelFor( t => t.<%= p.PropertyName.ToSafeName() %> )</dt>
+            <dd>
+                @Model.<%= p.PropertyName.ToSafeName() %>
+            </dd>
+        </dl>
+    <% }%>
+    </div>
+</div>
+<div id="dialogButtons">
+    @Html.EasyUi().DialogButton( "关 闭" ).Icon( "icon-cancel" ).Width( 90 ).CloseDialog()
+</div>

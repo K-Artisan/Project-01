@@ -1,0 +1,14 @@
+D:\Yun\Services\Release\SecurityCenter\Domains.Security.XML
+D:\Yun\Services\Release\SecurityCenter\Domains.Security.dll
+D:\Yun\Services\Release\SecurityCenter\Domains.Security.pdb
+D:\Yun\Release\Domains.Security.XML
+D:\Yun\Release\Domains.Security.dll
+D:\Yun\Release\Domains.Security.pdb
+D:\Yun\Release\SecurityService\Domains.Security.XML
+D:\Yun\Release\SecurityService\Domains.Security.dll
+D:\Yun\Release\SecurityService\Domains.Security.pdb
+D:\Yun\Services\SecurityCenter\Domains.Security\obj\Debug\Domains.Security.SecurityResource.resources
+D:\Yun\Services\SecurityCenter\Domains.Security\obj\Debug\Domains.Security.csproj.GenerateResource.Cache
+D:\Yun\Services\SecurityCenter\Domains.Security\obj\Debug\Domains.Security.dll
+D:\Yun\Services\SecurityCenter\Domains.Security\obj\Debug\Domains.Security.pdb
+D:\Yun\Services\SecurityCenter\Domains.Security\obj\Debug\Domains.Security.csprojResolveAssemblyReference.cache

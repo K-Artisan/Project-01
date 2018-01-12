@@ -1,0 +1,5 @@
+D:\Book\Action\Util\Framework\TestBin\Util.Webs.Tests.dll
+D:\Book\Action\Util\Framework\TestBin\Util.Webs.Tests.pdb
+D:\Book\Action\Util\Framework\Util\Util.Webs.Tests\obj\Debug\07-Util.Webs.Tests.csprojResolveAssemblyReference.cache
+D:\Book\Action\Util\Framework\Util\Util.Webs.Tests\obj\Debug\Util.Webs.Tests.dll
+D:\Book\Action\Util\Framework\Util\Util.Webs.Tests\obj\Debug\Util.Webs.Tests.pdb

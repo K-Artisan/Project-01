@@ -1,0 +1,52 @@
+﻿<%@ Template Language="C#" TargetLanguage="C#" Debug="True" Encoding="UTF-8" %>
+
+<%@ Assembly Src="..\Common\Model.cs" %>
+<%@ Assembly Src="..\Common\Extensions.cs" %>
+
+<%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Text.RegularExpressions" %>
+<%@ Import Namespace="SchemaMapper" %>
+
+<%@ Property Name="Entity" Type="SchemaMapper.Entity"  %>
+<%@ Property Name="Namespace" Type="System.String" %>
+<%-- Safe类名 --%>
+<% string SafeClassName = Entity.ClassName.ToSafeName(); %>
+<%-- 描述 --%>
+<% string Description = Entity.Description; %>
+<%-- 驼峰形式类名 --%>
+<% string CamelClassName = SafeClassName.ToCamelCase(); %>
+@model <%= SafeClassName %>Dto
+@{
+    var x = @Html.EasyUi();
+}
+@section top {
+    @*工具栏*@
+    <div class="toolbar">
+        @x.Button( "添加<%=Description%>" ).Icon( "icon-add" ).ToolTip( R.RememberSave ).Plain().AddByGrid()
+        @x.Button( "编辑<%=Description%>" ).Icon( "icon-edit" ).ToolTip( R.RememberSave ).Plain().EditByGrid()
+        @x.Button( "取消编辑" ).Icon( "icon-cancel2" ).Plain().CancelByGrid()
+        @x.Button( "删除<%=Description%>" ).Icon( "icon-delete" ).ToolTip( R.RememberSave ).Plain().DeleteByGrid()
+        @x.Button( "保 存" ).Icon( "icon-save" ).Plain().SaveByGrid( "/<%= Namespace %>/<%= CamelClassName %>/save" )
+        @x.Button( "刷 新" ).Icon( "icon-refresh" ).Plain().Refresh()
+    </div>
+}
+@section content {
+    @*右键菜单*@
+    @Html.Partial( "Menus/GridMenu" )
+    @*查询表单*@
+    @Html.Partial( "Parts/QueryForm" )
+    @*表格*@
+    @(x.Grid( "grid" ).Sort( "<%= Entity.GetOrderBy() %>" ).Toolbar( "divQuery" ).Url( "/<%= Namespace %>/<%= CamelClassName %>/query" )
+        .Menu().Fit()
+        .Columns(
+        <% foreach(Property p in Entity.GetProperties() ) { %>
+        <% if( p.IsKey ) {%>
+            x.GridColumn( t => t.Id ).CheckBox(),
+        <% continue; } %>
+            x.GridColumn( t => t.<%= p.PropertyName.ToSafeName() %>,<%=p.GetGridColumnWidth()%>,true )<%= Entity.GetComma(p) %>
+        <% }%>
+        )
+    )
+}

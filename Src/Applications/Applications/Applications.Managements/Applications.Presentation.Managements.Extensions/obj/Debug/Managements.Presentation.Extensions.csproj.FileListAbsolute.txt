@@ -1,0 +1,11 @@
+D:\Yun\Release\Managements.Presentation.Extensions.XML
+D:\Yun\Release\Managements.Presentation.Extensions.dll
+D:\Yun\Release\Managements.Presentation.Extensions.pdb
+D:\Yun\Applications\Managements\EasyUi\Libraries\Managements.Presentation.Extensions.XML
+D:\Yun\Applications\Managements\EasyUi\Libraries\Managements.Presentation.Extensions.dll
+D:\Yun\Applications\Managements\EasyUi\Libraries\Managements.Presentation.Extensions.pdb
+D:\Yun\Applications\Managements\EasyUi\Release\Managements.Presentation.Extensions.XML
+D:\Yun\Applications\Managements\EasyUi\Release\Managements.Presentation.Extensions.dll
+D:\Yun\Applications\Managements\EasyUi\Release\Managements.Presentation.Extensions.pdb
+D:\Yun\Applications\Managements\EasyUi\Managements.Presentation.Extensions\obj\Debug\Managements.Presentation.Extensions.dll
+D:\Yun\Applications\Managements\EasyUi\Managements.Presentation.Extensions\obj\Debug\Managements.Presentation.Extensions.pdb

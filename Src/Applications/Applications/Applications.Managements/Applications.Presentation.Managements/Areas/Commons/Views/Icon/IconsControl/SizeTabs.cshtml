@@ -1,0 +1,14 @@
+﻿@model IconListViewModel
+@{
+    var x = Html.EasyUi();
+}
+@*图标尺寸选项卡*@
+@using ( x.Tabs().Fit().Border( false ).TabPosition( Align.Left ).HeaderWidth( 60 ).Begin() ) {
+    using ( x.TabPanel( "16*16" ).AddClass( "tab_Size" ).Begin() ) {
+        @Html.Partial( "IconsControl/Tab" )
+    }
+    using ( x.TabPanel( "24*24" ).AddClass( "tab_Size" ).Url( "/Commons/Icon/GetIconTab?rows=100&Width=24&Height=24&CategoryId=" + Model.CategoryId ).Begin() ) {
+    }
+    using ( @x.TabPanel( "32*32" ).AddClass( "tab_Size" ).Url( "/Commons/Icon/GetIconTab?rows=100&Width=32&Height=32&CategoryId=" + Model.CategoryId ).Begin() ) {
+    }
+}

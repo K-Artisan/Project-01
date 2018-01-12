@@ -1,0 +1,8 @@
+D:\Yun\BusinessFramework\Biz\Biz.Domains.Security\obj\Debug\04-Biz.Domains.Security.csprojResolveAssemblyReference.cache
+D:\Yun\BusinessFramework\Biz\Biz.Domains.Security\obj\Debug\Biz.Domains.Security.SecurityResource.resources
+D:\Yun\BusinessFramework\Biz\Biz.Domains.Security\obj\Debug\04-Biz.Domains.Security.csproj.GenerateResource.Cache
+D:\Yun\Release\Biz.Domains.Security.xml
+D:\Yun\Release\Biz.Domains.Security.dll
+D:\Yun\Release\Biz.Domains.Security.pdb
+D:\Yun\BusinessFramework\Biz\Biz.Domains.Security\obj\Debug\Biz.Domains.Security.dll
+D:\Yun\BusinessFramework\Biz\Biz.Domains.Security\obj\Debug\Biz.Domains.Security.pdb

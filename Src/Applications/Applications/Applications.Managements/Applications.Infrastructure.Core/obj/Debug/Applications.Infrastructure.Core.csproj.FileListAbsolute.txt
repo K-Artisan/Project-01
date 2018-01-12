@@ -1,0 +1,5 @@
+D:\Yun\Applications\Applications.Managements\EasyUi\Release\Applications.Infrastructure.Core.XML
+D:\Yun\Applications\Applications.Managements\EasyUi\Release\Applications.Infrastructure.Core.dll
+D:\Yun\Applications\Applications.Managements\EasyUi\Release\Applications.Infrastructure.Core.pdb
+D:\Yun\Applications\Applications.Managements\EasyUi\Applications.Infrastructure.Core\obj\Debug\Applications.Infrastructure.Core.dll
+D:\Yun\Applications\Applications.Managements\EasyUi\Applications.Infrastructure.Core\obj\Debug\Applications.Infrastructure.Core.pdb

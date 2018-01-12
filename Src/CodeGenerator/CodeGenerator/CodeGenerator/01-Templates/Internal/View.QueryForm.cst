@@ -1,0 +1,34 @@
+﻿<%@ Template Language="C#" TargetLanguage="C#" Debug="True" Encoding="UTF-8" %>
+
+<%@ Assembly Src="..\Common\Model.cs" %>
+<%@ Assembly Src="..\Common\Extensions.cs" %>
+
+<%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Text.RegularExpressions" %>
+<%@ Import Namespace="SchemaMapper" %>
+
+<%@ Property Name="Entity" Type="SchemaMapper.Entity"  %>
+<%@ Property Name="Namespace" Type="System.String" %>
+<%-- Safe类名 --%>
+<% string SafeClassName = Entity.ClassName.ToSafeName(); %>
+<%-- 描述 --%>
+<% string Description = Entity.Description; %>
+@model <%= SafeClassName %>Query
+@{
+    var x = @Html.EasyUi();
+}
+<div id="divQuery" class="divQueryForm">
+    @using ( x.Form( "formQuery" ).AddClass( "form" ).Begin() ) {
+        <dl>
+            <dt>@Html.LabelFor( t => t.<%= Entity.GetFirstProperty().PropertyName.ToSafeName() %> )</dt>
+            <dd>
+                @x.TextBox( t => t.<%= Entity.GetFirstProperty().PropertyName.ToSafeName() %> )
+            </dd>
+        </dl>
+        <span class="button">
+            @x.Button( "查 询" ).Width( 70 ).Icon( "icon-search" ).Query()
+        </span>
+    }
+</div>

@@ -1,0 +1,6 @@
+D:\Yun\BusinessFramework\Release\Biz.Core.XML
+D:\Yun\BusinessFramework\Release\Biz.Core.dll
+D:\Yun\BusinessFramework\Biz\Biz.Core\obj\Release\Biz.Core.dll
+D:\Yun\Release\Biz.Core.XML
+D:\Yun\Release\Biz.Core.dll
+D:\Yun\BusinessFramework\Biz\Biz.Core\obj\Release\Biz.Core.csprojResolveAssemblyReference.cache

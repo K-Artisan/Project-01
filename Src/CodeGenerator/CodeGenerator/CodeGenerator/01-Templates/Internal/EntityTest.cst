@@ -1,0 +1,40 @@
+﻿<%@ Template Language="C#" TargetLanguage="C#" Debug="True" Encoding="UTF-8" %>
+
+<%@ Assembly Src="..\Common\Model.cs" %>
+<%@ Assembly Src="..\Common\Extensions.cs" %>
+
+<%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Text.RegularExpressions" %>
+<%@ Import Namespace="SchemaMapper" %>
+
+<%@ Property Name="Entity" Type="SchemaMapper.Entity"  %>
+<%@ Property Name="Namespace" Type="System.String" %>
+<%-- Safe类名 --%>
+<% string SafeClassName = Entity.ClassName.ToSafeName(); %>
+<%-- 描述 --%>
+<% string Description = Entity.Description; %>
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using <%= Namespace %>.Domains.Models;
+
+namespace <%= Namespace %>.Tests.Models.<%= SafeClassName.ToPlural() %> {
+    /// <summary>
+    /// <%= Description %>测试
+    /// </summary>
+    [TestClass]
+    public partial class <%= SafeClassName %>Test {
+        /// <summary>
+        /// <%= Description %>
+        /// </summary>
+        private <%= SafeClassName %> <%= SafeClassName.ToFieldName() %>;
+
+        /// <summary>
+        /// 初始化测试
+        /// </summary>
+        [TestInitialize]
+        public void Init() {
+            <%= SafeClassName.ToFieldName() %> = Create();
+        }
+    }
+}

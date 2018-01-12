@@ -1,0 +1,6 @@
+D:\Yun\Services\SecurityCenter\Domains.Security\obj\Release\Domains.Security.dll
+D:\Yun\Release\Domains.Security.XML
+D:\Yun\Release\Domains.Security.dll
+D:\Yun\Services\SecurityCenter\Domains.Security\obj\Release\Domains.Security.csprojResolveAssemblyReference.cache
+D:\Yun\Release\SecurityService\Domains.Security.XML
+D:\Yun\Release\SecurityService\Domains.Security.dll

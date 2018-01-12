@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Applications.Infrastructure.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Applications.IApplicationUnitOfWork">
+            <summary>
+            应用程序工作单元
+            </summary>
+        </member>
+    </members>
+</doc>

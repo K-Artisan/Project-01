@@ -1,0 +1,12 @@
+D:\Yun\Applications\Applications.Managements\EasyUi\Applications.Datas.Ef.MySql\obj\Debug\03-Applications.Datas.Ef.MySql.csprojResolveAssemblyReference.cache
+D:\Yun\Applications\Applications.Managements\EasyUi\Release\Applications.Datas.Ef.MySql.XML
+D:\Yun\Applications\Applications.Managements\EasyUi\Release\Applications.Datas.Ef.MySql.dll
+D:\Yun\Applications\Applications.Managements\EasyUi\Release\Applications.Datas.Ef.MySql.pdb
+D:\Yun\Applications\Applications.Managements\EasyUi\Applications.Datas.Ef.MySql\obj\Debug\Applications.Datas.Ef.MySql.dll
+D:\Yun\Applications\Applications.Managements\EasyUi\Applications.Datas.Ef.MySql\obj\Debug\Applications.Datas.Ef.MySql.pdb
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Datas.Ef.MySql.XML
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Datas.Ef.MySql.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Datas.Ef.MySql.pdb
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Datas.Ef.MySql\obj\Debug\03-Applications.Datas.Ef.MySql.csprojResolveAssemblyReference.cache
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Datas.Ef.MySql\obj\Debug\Applications.Datas.Ef.MySql.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Datas.Ef.MySql\obj\Debug\Applications.Datas.Ef.MySql.pdb

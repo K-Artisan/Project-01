@@ -1,0 +1,6 @@
+D:\Yun\Release\Biz.Systems.Domains.XML
+D:\Yun\Release\Biz.Systems.Domains.dll
+D:\Yun\Release\Biz.Systems.Domains.pdb
+D:\Yun\BusinessFramework\Biz\Biz.Systems.Domains\obj\Debug\06-Biz.Systems.Domains.csprojResolveAssemblyReference.cache
+D:\Yun\BusinessFramework\Biz\Biz.Systems.Domains\obj\Debug\Biz.Systems.Domains.dll
+D:\Yun\BusinessFramework\Biz\Biz.Systems.Domains\obj\Debug\Biz.Systems.Domains.pdb

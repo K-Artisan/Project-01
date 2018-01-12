@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Util.Datas.MySql</name>
+    </assembly>
+    <members>
+        <member name="T:Util.Datas.MySql.MySqlUnitOfWork">
+            <summary>
+            MySql工作单元
+            </summary>
+        </member>
+        <member name="M:Util.Datas.MySql.MySqlUnitOfWork.#ctor(System.String)">
+            <summary>
+            初始化MySql工作单元
+            </summary>
+            <param name="connectionName">连接字符串的名称</param>
+        </member>
+        <member name="M:Util.Datas.MySql.MySqlUnitOfWork.SaveChanges">
+            <summary>
+            保存更新
+            </summary>
+        </member>
+        <member name="M:Util.Datas.MySql.MySqlUnitOfWork.InitVersion(System.Data.Entity.Core.Objects.ObjectStateEntry)">
+            <summary>
+            初始化版本号
+            </summary>
+        </member>
+    </members>
+</doc>

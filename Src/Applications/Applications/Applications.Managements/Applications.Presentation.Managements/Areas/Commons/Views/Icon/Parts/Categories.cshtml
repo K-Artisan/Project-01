@@ -1,0 +1,13 @@
+﻿@{
+    var x = @Html.EasyUi();
+}
+@*分类树菜单*@
+@Html.Partial( "Menus/TreeMenu" )
+@*工具栏*@
+<div class="toolbar">
+    @x.DialogButton( "添加", "/commons/icon/addCategory" ).Icon( "icon-add" ).Plain().Title( "添加图标分类" ).DialogSize( 400, 180 )
+    @x.DialogButton( "编辑", "/commons/icon/editCategory" ).Id( "btnEditTree" ).Icon( "icon-edit" ).Plain().Title( "编辑图标分类" ).DialogSize( 400, 180 ).ShowEditDialogByTree()
+    @x.Button( "删除" ).Id( "btnDeleteTree" ).Icon( "icon-delete" ).Plain().DeleteByTree( "/commons/icon/deleteCategories", "refreshIconPanel" )
+</div>
+@*图标分类树*@
+@x.Tree( "/commons/icon/GetCategories", "tree" ).Checkbox().Menu().RefreshPanel( "panelIcon", "/commons/icon/iconPanel", "categoryId" )

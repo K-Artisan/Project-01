@@ -1,0 +1,38 @@
+﻿<%@ Template Language="C#" TargetLanguage="C#" Debug="True" Encoding="UTF-8" %>
+
+<%@ Assembly Src="..\Common\Model.cs" %>
+<%@ Assembly Src="..\Common\Extensions.cs" %>
+
+<%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Text.RegularExpressions" %>
+
+<%@ Import Namespace="SchemaMapper" %>
+
+<%@ Property Name="Entity" Type="SchemaMapper.Entity"  %>
+<%@ Property Name="Namespace" Type="System.String"  %>
+<%-- Safe类名 --%>
+<% string SafeClassName = Entity.ClassName.ToSafeName(); %>
+<%-- 描述 --%>
+<% string Description = Entity.Description; %>
+namespace <%= Entity.GetNamespace(Namespace,"Datas.Ef.MySql.Mappings") %> {
+    /// <summary>
+    /// <%= Description %>映射
+    /// </summary>
+    public class <%= SafeClassName %>Map :  Ef.Mappings.<%= Entity.TableSchema %>.<%= SafeClassName %>Map {
+        /// <summary>
+        /// 映射表
+        /// </summary>
+        protected override void MapTable() {
+            ToTable( "[<%= Entity.TableSchema %>.<%= Entity.TableName %>]" );
+        }
+        
+        /// <summary>
+        /// 是否支持行版本
+        /// </summary>
+        protected override bool IsSupportRowVersion {
+            get { return false; }
+        }
+    }
+}

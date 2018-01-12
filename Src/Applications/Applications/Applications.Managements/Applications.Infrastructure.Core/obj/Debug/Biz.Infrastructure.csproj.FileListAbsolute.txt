@@ -1,0 +1,6 @@
+D:\Yun\Release\Biz.Infrastructure.XML
+D:\Yun\Release\Biz.Infrastructure.dll
+D:\Yun\Release\Biz.Infrastructure.pdb
+D:\Yun\BusinessFramework\Biz\Biz.Infrastructure\obj\Debug\Biz.Infrastructure.dll
+D:\Yun\BusinessFramework\Biz\Biz.Infrastructure\obj\Debug\Biz.Infrastructure.pdb
+D:\Yun\BusinessFramework\Biz\Biz.Infrastructure\obj\Debug\Biz.Infrastructure.csprojResolveAssemblyReference.cache

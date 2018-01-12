@@ -1,0 +1,5 @@
+E:\CodeLib\OpenSourse\通用框架\Framework.2015.5.26.1\Framework\Util.Offices\Util.Offices.Npoi.Tests\obj\Debug\Util.Offices.Npoi.Tests.csprojResolveAssemblyReference.cache
+E:\CodeLib\OpenSourse\通用框架\Framework.2015.5.26.1\Framework\TestBin\Util.Offices.Npoi.Tests.dll
+E:\CodeLib\OpenSourse\通用框架\Framework.2015.5.26.1\Framework\TestBin\Util.Offices.Npoi.Tests.pdb
+E:\CodeLib\OpenSourse\通用框架\Framework.2015.5.26.1\Framework\Util.Offices\Util.Offices.Npoi.Tests\obj\Debug\Util.Offices.Npoi.Tests.dll
+E:\CodeLib\OpenSourse\通用框架\Framework.2015.5.26.1\Framework\Util.Offices\Util.Offices.Npoi.Tests\obj\Debug\Util.Offices.Npoi.Tests.pdb

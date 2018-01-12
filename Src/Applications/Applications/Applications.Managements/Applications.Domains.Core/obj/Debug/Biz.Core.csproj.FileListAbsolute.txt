@@ -1,0 +1,8 @@
+D:\Yun\BusinessFramework\Release\Biz.Core.dll
+D:\Yun\BusinessFramework\Release\Biz.Core.pdb
+D:\Yun\BusinessFramework\Release\Biz.Core.XML
+D:\Yun\Release\Biz.Core.xml
+D:\Yun\Release\Biz.Core.dll
+D:\Yun\Release\Biz.Core.pdb
+D:\Yun\BusinessFramework\Biz\Biz.Core\obj\Debug\Biz.Core.dll
+D:\Yun\BusinessFramework\Biz\Biz.Core\obj\Debug\Biz.Core.pdb

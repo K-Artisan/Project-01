@@ -1,0 +1,16 @@
+D:\Yun\Framework\CodeGenerator\CodeGenerator\bin\Debug\CodeGenerator.dll
+D:\Yun\Framework\CodeGenerator\CodeGenerator\bin\Debug\CodeGenerator.pdb
+D:\Yun\Framework\CodeGenerator\CodeGenerator\bin\Debug\EntityFramework.dll
+D:\Yun\Framework\CodeGenerator\CodeGenerator\bin\Debug\ICSharpCode.NRefactory.CSharp.dll
+D:\Yun\Framework\CodeGenerator\CodeGenerator\bin\Debug\ICSharpCode.NRefactory.dll
+D:\Yun\Framework\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.dll
+D:\Yun\Framework\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.pdb
+D:\Yun\Framework\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.csprojResolveAssemblyReference.cache
+D:\Yun\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.csprojResolveAssemblyReference.cache
+D:\Yun\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.dll
+D:\Yun\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.pdb
+D:\Yun\CodeGenerator\CodeGenerator\bin\Debug\CodeGenerator.dll
+D:\Yun\CodeGenerator\CodeGenerator\bin\Debug\CodeGenerator.pdb
+D:\Yun\CodeGenerator\CodeGenerator\bin\Debug\EntityFramework.dll
+D:\Yun\CodeGenerator\CodeGenerator\bin\Debug\ICSharpCode.NRefactory.CSharp.dll
+D:\Yun\CodeGenerator\CodeGenerator\bin\Debug\ICSharpCode.NRefactory.dll

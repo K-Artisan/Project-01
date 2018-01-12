@@ -1,0 +1,7 @@
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\TestBin\log4net.config
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\TestBin\Applications.Tests.Integration.dll.config
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\TestBin\Applications.Tests.Integration.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\TestBin\Applications.Tests.Integration.pdb
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Tests.Integration.Applications\obj\Debug\02-Applications.Tests.Integration.csprojResolveAssemblyReference.cache
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Tests.Integration.Applications\obj\Debug\Applications.Tests.Integration.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Tests.Integration.Applications\obj\Debug\Applications.Tests.Integration.pdb

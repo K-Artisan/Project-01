@@ -1,0 +1,6 @@
+D:\Yun\BusinessFramework\Biz\Biz.Datas.Ef.Applications\obj\Debug\Biz.Datas.Ef.Applications.csprojResolveAssemblyReference.cache
+D:\Yun\Release\Biz.Datas.Ef.Applications.xml
+D:\Yun\Release\Biz.Datas.Ef.Applications.dll
+D:\Yun\Release\Biz.Datas.Ef.Applications.pdb
+D:\Yun\BusinessFramework\Biz\Biz.Datas.Ef.Applications\obj\Debug\Biz.Datas.Ef.Applications.dll
+D:\Yun\BusinessFramework\Biz\Biz.Datas.Ef.Applications\obj\Debug\Biz.Datas.Ef.Applications.pdb

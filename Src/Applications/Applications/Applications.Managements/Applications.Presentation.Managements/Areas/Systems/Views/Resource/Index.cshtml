@@ -1,0 +1,51 @@
+﻿@model ResourceDto
+@{
+    var x = Html.EasyUi();
+    var ui = Html.Ui();
+}
+@section head {
+    <script type="text/javascript">
+        $(function () {
+            $.easyui.newRowUrl = "/systems/resource/new";
+        });
+    </script>
+}
+@section top {
+    @*工具栏*@
+    <div class="toolbar">
+        @x.Button( "添加资源" ).Icon( "icon-add4" ).Plain().ToolTip( R.RememberSave ).AddRootByTreeGrid()
+        @x.Button( "添加下级资源" ).Icon( "icon-add" ).Plain().ToolTip( R.RememberSave ).AddToChildByTreeGrid()
+        @x.Button( "编辑资源" ).Icon( "icon-edit" ).Plain().ToolTip( R.RememberSave ).EditByTreeGrid()
+        @x.Button( "取消编辑" ).Icon( "icon-cancel2" ).Plain().CancelByTreeGrid()
+        @x.Button( "删除资源" ).Icon( "icon-delete3" ).Plain().ToolTip( R.RememberSave ).DeleteByTreeGrid()
+        @x.Button( "上 移" ).Icon( "icon-up" ).Plain().ToolTip( R.RememberSave ).MoveUpByTreeGrid()
+        @x.Button( "下 移" ).Icon( "icon-down" ).Plain().ToolTip( R.RememberSave ).MoveDownByTreeGrid()
+        @x.Button( "保 存" ).Icon( "icon-save" ).Plain().SaveByTreeGrid( "/systems/resource/save" )
+        @x.Button( "冻 结" ).Icon( "icon-delete4" ).Plain().SubmitIdsByTreeGrid( "/systems/resource/disable" )
+        @x.Button( "启 用" ).Icon( "icon-ok2" ).Plain().SubmitIdsByTreeGrid( "/systems/resource/enable" )
+        @x.Button( "刷 新" ).Icon( "icon-refresh" ).Plain().RefreshByTreeGrid()
+    </div>
+}
+@section content {
+    @*右键菜单*@
+    @Html.Partial( "Menus/TreeGridMenu" )
+    @*查询表单*@
+    @Html.Partial( "Parts/QueryForm" )
+    @*表格*@
+    @(x.TreeGrid( "grid", "Name" ).Toolbar( "divQuery" ).Url( "/systems/resource/query" )
+          .Menu().EnableDrag().Fit()
+          .Columns(
+              x.GridColumn( t => t.Id ).CheckBox(),
+              ui.GridColumn().Application( t => t.ApplicationId ),
+              x.GridColumn( t => t.Name, 150, true ),
+              x.GridColumn( t => t.Uri, 250, true ),
+              x.GridColumn( t => t.Type, 100, true ),
+              ui.GridColumn().Icon( t => t.SmallIcon ),
+              ui.GridColumn().Icon( t => t.LargeIcon ).FormatImage( 32, 32, true ),
+              x.GridColumn( t => t.Note, 180, true ),
+              x.GridColumn( t => t.Enabled, 60, true ),
+              x.GridColumn( t => t.SortId, 70, true ),
+              x.GridColumn( t => t.CreateTime, 120 )
+        )   
+    )
+}

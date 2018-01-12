@@ -1,0 +1,6 @@
+D:\Yun\Release\Biz.Commons.XML
+D:\Yun\Release\Biz.Commons.dll
+D:\Yun\Release\Biz.Commons.pdb
+D:\Yun\BusinessFramework\Biz\Biz.Commons\obj\Debug\Biz.Commons.dll
+D:\Yun\BusinessFramework\Biz\Biz.Commons\obj\Debug\Biz.Commons.pdb
+D:\Yun\BusinessFramework\Biz\Biz.Commons\obj\Debug\Biz.Commons.csprojResolveAssemblyReference.cache

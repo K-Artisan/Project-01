@@ -1,0 +1,15 @@
+D:\Yun\Framework\Util\Data\Util.Datas.SqlServer\obj\Debug\Util.Datas.SqlServer.csprojResolveAssemblyReference.cache
+D:\Yun\Framework\Util\Data\Util.Datas.SqlServer\obj\Debug\Util.Datas.SqlServer.dll
+D:\Yun\Framework\Util\Data\Util.Datas.SqlServer\obj\Debug\Util.Datas.SqlServer.pdb
+D:\Yun\Release\Util.Datas.SqlServer.XML
+D:\Yun\Release\Util.Datas.SqlServer.dll
+D:\Yun\Release\Util.Datas.SqlServer.pdb
+D:\Yun\Framework\Util\Core\Util.Datas.SqlServer\obj\Debug\Util.Datas.SqlServer.csprojResolveAssemblyReference.cache
+D:\Yun\Framework\Util\Core\Util.Datas.SqlServer\obj\Debug\Util.Datas.SqlServer.dll
+D:\Yun\Framework\Util\Core\Util.Datas.SqlServer\obj\Debug\Util.Datas.SqlServer.pdb
+D:\Book\Action\Util\Framework\Release\Util.Datas.SqlServer.XML
+D:\Book\Action\Util\Framework\Release\Util.Datas.SqlServer.dll
+D:\Book\Action\Util\Framework\Release\Util.Datas.SqlServer.pdb
+D:\Book\Action\Util\Framework\Util\Util.Datas.SqlServer\obj\Debug\Util.Datas.SqlServer.csprojResolveAssemblyReference.cache
+D:\Book\Action\Util\Framework\Util\Util.Datas.SqlServer\obj\Debug\Util.Datas.SqlServer.dll
+D:\Book\Action\Util\Framework\Util\Util.Datas.SqlServer\obj\Debug\Util.Datas.SqlServer.pdb

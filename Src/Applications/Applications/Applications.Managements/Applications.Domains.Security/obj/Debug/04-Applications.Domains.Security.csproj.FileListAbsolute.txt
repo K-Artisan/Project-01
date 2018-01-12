@@ -1,0 +1,11 @@
+D:\Yun\Applications\Release\Applications.Domains.Security.xml
+D:\Yun\Applications\Release\Applications.Domains.Security.dll
+D:\Yun\Applications\Release\Applications.Domains.Security.pdb
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Domains.Security.XML
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Domains.Security.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Domains.Security.pdb
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Security\obj\Debug\04-Applications.Domains.Security.csprojResolveAssemblyReference.cache
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Security\obj\Debug\Applications.Domains.Security.SecurityResource.resources
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Security\obj\Debug\04-Applications.Domains.Security.csproj.GenerateResource.Cache
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Security\obj\Debug\Applications.Domains.Security.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Security\obj\Debug\Applications.Domains.Security.pdb

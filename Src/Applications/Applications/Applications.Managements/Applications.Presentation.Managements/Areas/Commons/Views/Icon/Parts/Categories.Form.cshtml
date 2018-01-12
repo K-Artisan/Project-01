@@ -1,0 +1,34 @@
+﻿@model IconCategoryDto
+@{
+    var x = @Html.EasyUi();
+}
+@*表单*@
+<div class="divForm">
+    <div class="formtitle">图标分类管理</div>
+    @using ( x.Form( "form" ).AddClass( "form" ).Action( "/commons/icon/saveCategory" ).Begin() ) {
+        <dl>
+            <dt>@Html.LabelFor( t => t.Name )</dt>
+            <dd>
+                @x.TextBox( t => t.Name )
+            </dd>
+        </dl>
+        <dl>
+            <dt>@Html.LabelFor( t => t.SortId )</dt>
+            <dd>
+                @x.TextBox( t => t.SortId )
+            </dd>
+        </dl>
+        @Html.HiddenFor( t => t.CreateTime )
+        @Html.HiddenFor( t => t.TenantId )
+        @Html.HiddenFor( t => t.Version )
+        @Html.HiddenFor( t => t.Id )
+        @Html.AntiForgeryToken()
+    }
+</div>
+@*按钮*@
+<div id="dialogButtons">
+    @x.Button( "保 存" ).Icon( "icon-ok" ).Width( 90 ).SubmitByTree( "", "refreshIconPanel" )
+    @x.DialogButton( "关 闭" ).Icon( "icon-cancel" ).Width( 90 ).CloseDialog()
+</div>
+@*js脚本*@
+@Html.Partial( "Parts/Script" )

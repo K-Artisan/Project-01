@@ -1,0 +1,54 @@
+﻿<%@ Template Language="C#" TargetLanguage="C#" Debug="True" Encoding="UTF-8" %>
+
+<%@ Assembly Src="..\Common\Model.cs" %>
+<%@ Assembly Src="..\Common\Extensions.cs" %>
+
+<%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Text.RegularExpressions" %>
+<%@ Import Namespace="SchemaMapper" %>
+<%@ Property Name="UnitOfWork" Type="System.String"  %>
+<%@ Property Name="Namespace" Type="System.String"  %>
+<%@ Property Name="IUnitOfWorkNamespace" Type="System.String"  %>
+using System;
+using Util.Domains;
+using Util.Datas.Ef;
+using <%= IUnitOfWorkNamespace %>;
+
+namespace <%= Namespace %>.Datas.Ef.Repositories {
+    /// <summary>
+    /// 仓储
+    /// </summary>
+    /// <typeparam name="TEntity">实体类型</typeparam>
+    /// <typeparam name="TKey">实体标识类型</typeparam>
+    public abstract class RepositoryBase<TEntity,TKey> : Repository<TEntity,TKey> where TEntity :class, IAggregateRoot<TKey> {
+        /// <summary>
+        /// 初始化仓储
+        /// </summary>
+        /// <param name="unitOfWork">工作单元</param>
+        protected RepositoryBase( I<%= UnitOfWork %> unitOfWork )
+            : base( unitOfWork ) {
+            UnitOfWork = (<%= UnitOfWork %>)unitOfWork;
+        }
+
+        /// <summary>
+        /// 工作单元
+        /// </summary>
+        protected new <%= UnitOfWork %> UnitOfWork { get; set; }
+    }
+    
+    /// <summary>
+    /// 仓储
+    /// </summary>
+    /// <typeparam name="TEntity">实体类型</typeparam>
+    public abstract class RepositoryBase<TEntity> : RepositoryBase<TEntity,Guid> where TEntity : class, IAggregateRoot<Guid> {
+        /// <summary>
+        /// 初始化仓储
+        /// </summary>
+        /// <param name="unitOfWork">工作单元</param>
+        protected RepositoryBase( I<%= UnitOfWork %> unitOfWork )
+            : base( unitOfWork ) {
+        }
+    }
+}

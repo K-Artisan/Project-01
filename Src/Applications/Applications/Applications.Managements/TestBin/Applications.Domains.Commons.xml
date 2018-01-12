@@ -1,0 +1,660 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Applications.Domains.Commons</name>
+    </assembly>
+    <members>
+        <member name="T:Applications.Domains.Commons.CommonResource">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.CommonResource.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.CommonResource.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.CommonResource.AreaRepeat">
+            <summary>
+              查找类似 地区 &apos;{0}&apos; 已存在，请修改 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.CommonResource.DicCodeRepeat">
+            <summary>
+              查找类似 字典编码 &apos;{0}&apos; 已存在，请修改 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.CommonResource.IconCategoryIsEmpty">
+            <summary>
+              查找类似 请选择图片分类 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.CommonResource.IconCategoryRepeat">
+            <summary>
+              查找类似 图标分类 &apos;{0}&apos; 已存在，请修改 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.CommonResource.IconCssIsEmpty">
+            <summary>
+              查找类似 请设置图标Css路径 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.CommonResource.UploadIconPathIsEmpty">
+            <summary>
+              查找类似 请设置图标上传路径 的本地化字符串。
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Factories.IconFactory">
+            <summary>
+            图标工厂
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Factories.IconFactory.Create(Util.Images.ImageInfo)">
+            <summary>
+            图片信息转换为图标
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.Area">
+            <summary>
+            地区
+            </summary>
+            <summary>
+            地区
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Area.#ctor">
+            <summary>
+            初始化地区
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Area.#ctor(System.Guid,System.String,System.Int32)">
+            <summary>
+            初始化地区
+            </summary>
+            <param name="id">地区标识</param>
+            <param name="path">路径</param>
+            <param name="level">级数</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Area.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Area.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Area.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Area.Text">
+            <summary>
+            地区名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Area.PinYin">
+            <summary>
+            拼音简码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Area.FullPinYin">
+            <summary>
+            全拼
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Area.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.Dic">
+            <summary>
+            字典
+            </summary>
+            <summary>
+            字典
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Dic.#ctor">
+            <summary>
+            初始化字典
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Dic.#ctor(System.Guid,System.String,System.Int32)">
+            <summary>
+            初始化字典
+            </summary>
+            <param name="id">字典标识</param>
+            <param name="path">路径</param>
+            <param name="level">级数</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Dic.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Dic.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Dic.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Dic.Text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Dic.PinYin">
+            <summary>
+            拼音简码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Dic.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.Icon">
+            <summary>
+            图标
+            </summary>
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.#ctor">
+            <summary>
+            初始化图标
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.#ctor(System.Guid,System.String,System.String)">
+            <summary>
+            初始化图标
+            </summary>
+            <param name="id">图标标识</param>
+            <param name="className">类名</param>
+            <param name="css">Css内容</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.GetCategory">
+            <summary>
+            获取图标分类
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.GetSize">
+            <summary>
+            获取文件大小
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.GenerateCss(System.String)">
+            <summary>
+            生成Css
+            </summary>
+            <param name="filePath">文件路径</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.CreateClassName(System.String)">
+            <summary>
+            创建类名
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.Icon.CreateCss(System.String)">
+            <summary>
+            创建Css
+            </summary>
+            <param name="filePath">文件路径</param>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.Name">
+            <summary>
+            图标名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.Path">
+            <summary>
+            图标路径
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.ClassName">
+            <summary>
+            类名
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.Size">
+            <summary>
+            图标大小
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.Css">
+            <summary>
+            Css代码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.CategoryId">
+            <summary>
+            图标分类编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.Icon.IconCategory">
+            <summary>
+            图标分类
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Models.IconCategory">
+            <summary>
+            图标分类
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.IconCategory.#ctor">
+            <summary>
+            初始化图标分类
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.IconCategory.#ctor(System.Guid)">
+            <summary>
+            初始化图标分类
+            </summary>
+            <param name="id">图标分类标识</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.IconCategory.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Models.IconCategory.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.IconCategory.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.IconCategory.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Models.IconCategory.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.AreaQuery">
+            <summary>
+            地区查询实体
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.AreaQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.AreaQuery.CheckEmpty">
+            <summary>
+            检查查询参数是否全部为空值
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.AreaQuery.AreaId">
+            <summary>
+            地区编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.AreaQuery.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.AreaQuery.Text">
+            <summary>
+            地区名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.AreaQuery.PinYin">
+            <summary>
+            拼音简码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.AreaQuery.FullPinYin">
+            <summary>
+            全拼
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.AreaQuery.BeginCreateTime">
+            <summary>
+            起始创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.AreaQuery.EndCreateTime">
+            <summary>
+            结束创建时间
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.DicQuery">
+            <summary>
+            字典查询实体
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.DicQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.DicQuery.CheckEmpty">
+            <summary>
+            检查查询参数是否全部为空值
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DicQuery.DicId">
+            <summary>
+            字典编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DicQuery.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DicQuery.Text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DicQuery.PinYin">
+            <summary>
+            拼音简码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DicQuery.BeginCreateTime">
+            <summary>
+            起始创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.DicQuery.EndCreateTime">
+            <summary>
+            结束创建时间
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.IconCategoryQuery">
+            <summary>
+            图标分类查询实体
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.IconCategoryQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconCategoryQuery.CategoryId">
+            <summary>
+            图标分类编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconCategoryQuery.TenantId">
+            <summary>
+            租户编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconCategoryQuery.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconCategoryQuery.BeginCreateTime">
+            <summary>
+            起始创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconCategoryQuery.EndCreateTime">
+            <summary>
+            结束创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconCategoryQuery.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Queries.IconQuery">
+            <summary>
+            图标查询实体
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Queries.IconQuery.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.IconId">
+            <summary>
+            图标编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.CategoryId">
+            <summary>
+            图标分类
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.TenantId">
+            <summary>
+            租户编号
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.Name">
+            <summary>
+            图标名称
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.Path">
+            <summary>
+            图标路径
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.ClassName">
+            <summary>
+            类名
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.MinSize">
+            <summary>
+            最小图标容量
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.MaxSize">
+            <summary>
+            最大图标容量
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.Css">
+            <summary>
+            Css代码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.BeginCreateTime">
+            <summary>
+            起始创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Queries.IconQuery.EndCreateTime">
+            <summary>
+            结束创建时间
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.IAreaRepository">
+            <summary>
+            地区仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.IDicRepository">
+            <summary>
+            字典仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Repositories.IDicRepository.GetDic(System.String,System.Nullable{System.Guid})">
+            <summary>
+            根据编码获取字典
+            </summary>
+            <param name="code">字典编码</param>
+            <param name="tenantId">租户编号</param>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.IIconCategoryRepository">
+            <summary>
+            图标分类仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Repositories.IIconRepository">
+            <summary>
+            图标仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Services.IconManager">
+            <summary>
+            图标管理器
+            </summary>
+        </member>
+        <member name="T:Applications.Domains.Commons.Services.IIconManager">
+            <summary>
+            图标管理器
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IIconManager.Upload(System.Guid,System.String,System.String)">
+            <summary>
+            上传图标
+            </summary>
+            <param name="categoryId">图标分类编号</param>
+            <param name="uploadIconPath">上传图标的路径</param>
+            <param name="cssPath">图标Css的路径</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IIconManager.Delete(System.Collections.Generic.List{System.Guid},System.String)">
+            <summary>
+            删除图标
+            </summary>
+            <param name="ids">图标编号集合</param>
+            <param name="cssPath">图标Css的路径</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.#ctor(Util.Files.IFileUpload,Applications.Domains.Commons.Repositories.IIconRepository,Util.Files.IFileManager)">
+            <summary>
+            初始化图标管理器
+            </summary>
+            <param name="fileUpload">文件上传操作</param>
+            <param name="iconRepository">图标仓储</param>
+            <param name="fileManager">文件管理器</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.Upload(System.Guid,System.String,System.String)">
+            <summary>
+            上传图标
+            </summary>
+            <param name="categoryId">图标分类编号</param>
+            <param name="uploadIconPath">上传图标的路径</param>
+            <param name="cssPath">图标Css的路径</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.ValidateUpload(System.Guid,System.String,System.String)">
+            <summary>
+            验证上传
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.UploadImage(System.String)">
+            <summary>
+            上传图片
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.ToIcon(System.Guid,Util.Images.ImageInfo)">
+            <summary>
+            转换为图标
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.AddToRepository(Applications.Domains.Commons.Models.Icon)">
+            <summary>
+            添加到仓储
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.AppendToFile(System.String,Applications.Domains.Commons.Models.Icon)">
+            <summary>
+            添加到CSS文件末尾
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.Delete(System.Collections.Generic.List{System.Guid},System.String)">
+            <summary>
+            删除图标
+            </summary>
+            <param name="ids">图标编号集合</param>
+            <param name="cssPath">图标Css的路径</param>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.RemoveFromRepository(System.Collections.Generic.IEnumerable{Applications.Domains.Commons.Models.Icon})">
+            <summary>
+            从仓储移除图标集合
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.DeleteFiles(System.Collections.Generic.IEnumerable{Applications.Domains.Commons.Models.Icon})">
+            <summary>
+            删除文件集合
+            </summary>
+        </member>
+        <member name="M:Applications.Domains.Commons.Services.IconManager.RemoveCss(System.Collections.Generic.IEnumerable{Applications.Domains.Commons.Models.Icon},System.String)">
+            <summary>
+            从Css文件中移除Css代码
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Services.IconManager.FileUpload">
+            <summary>
+            文件上传操作
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Services.IconManager.IconRepository">
+            <summary>
+            图标仓储
+            </summary>
+        </member>
+        <member name="P:Applications.Domains.Commons.Services.IconManager.FileManager">
+            <summary>
+            文件管理器
+            </summary>
+        </member>
+    </members>
+</doc>

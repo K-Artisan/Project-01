@@ -1,0 +1,8 @@
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Domains.Commons.XML
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Domains.Commons.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Domains.Commons.pdb
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Commons\obj\Debug\02-Applications.Domains.Commons.csprojResolveAssemblyReference.cache
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Commons\obj\Debug\Applications.Domains.Commons.CommonResource.resources
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Commons\obj\Debug\02-Applications.Domains.Commons.csproj.GenerateResource.Cache
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Commons\obj\Debug\Applications.Domains.Commons.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Domains.Commons\obj\Debug\Applications.Domains.Commons.pdb

@@ -1,0 +1,1429 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Applications.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Applications.Services.Configs.ConfigInfo">
+            <summary>
+            配置信息
+            </summary>
+        </member>
+        <member name="F:Applications.Services.Configs.ConfigInfo.UploadIconPath">
+            <summary>
+            上传图标文件的路径
+            </summary>
+        </member>
+        <member name="F:Applications.Services.Configs.ConfigInfo.CssPath">
+            <summary>
+            上传图标Css的路径
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Configs.IocConfig">
+            <summary>
+            应用程序Ioc配置
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Configs.IocConfig.Load(Autofac.ContainerBuilder)">
+            <summary>
+            加载配置
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Configs.ApplicationConfig">
+            <summary>
+            应用程序配置
+            </summary>
+        </member>
+        <member name="F:Applications.Services.Configs.ApplicationConfig.ApplicationCode">
+            <summary>
+            应用程序编码
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Contracts.Security.IApplicationService">
+            <summary>
+            应用程序服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Contracts.Security.IApplicationService.Export">
+            <summary>
+            导出
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Contracts.Security.IApplicationService.Enable(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            启用
+            </summary>
+            <param name="ids">应用程序编号</param>
+        </member>
+        <member name="M:Applications.Services.Contracts.Security.IApplicationService.Disable(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            冻结
+            </summary>
+            <param name="ids">应用程序编号</param>
+        </member>
+        <member name="T:Applications.Services.Contracts.Commons.IAreaService">
+            <summary>
+            地区服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Contracts.Commons.IAreaService.Load(System.Nullable{System.Guid})">
+            <summary>
+            加载地区数据
+            </summary>
+            <param name="parentId">父编号</param>
+        </member>
+        <member name="T:Applications.Services.Contracts.Commons.IDicService">
+            <summary>
+            字典服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Contracts.Commons.IDicService.Load(System.String,System.Nullable{System.Guid})">
+            <summary>
+            根据编码加载字典列表
+            </summary>
+            <param name="code">字典编码</param>
+            <param name="tenantId">租户编号</param>
+        </member>
+        <member name="T:Applications.Services.Contracts.Commons.IIconCategoryService">
+            <summary>
+            图标分类服务
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Contracts.Commons.IIconService">
+            <summary>
+            图标服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Contracts.Commons.IIconService.Upload(System.String)">
+            <summary>
+            上传图标
+            </summary>
+            <param name="categoryId">图标分类编号</param>
+        </member>
+        <member name="T:Applications.Services.Contracts.Security.IResourceService">
+            <summary>
+            资源服务
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Contracts.Configs.ISystemConfigCategoryService">
+            <summary>
+            系统配置分类服务
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Contracts.Configs.ISystemConfigService">
+            <summary>
+            系统配置服务
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Contracts.Security.ISystemService">
+            <summary>
+            系统服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Contracts.Security.ISystemService.GetSkins">
+            <summary>
+            获取皮肤列表
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Contracts.Security.ISystemService.GetMenuStyles">
+            <summary>
+            获取菜单样式列表
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Contracts.Security.ISystemService.GetSkinDescription(System.String)">
+            <summary>
+            获取皮肤描述
+            </summary>
+            <param name="skin">皮肤</param>
+        </member>
+        <member name="M:Applications.Services.Contracts.Security.ISystemService.GetMenuStyleDescription(System.String)">
+            <summary>
+            获取菜单样式描述
+            </summary>
+            <param name="style">菜单样式</param>
+        </member>
+        <member name="M:Applications.Services.Contracts.Security.ISystemService.GetSkin">
+            <summary>
+            获取皮肤
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Contracts.Security.ISystemService.GetModules">
+            <summary>
+            获取模块列表
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Dtos.Security.ApplicationDto">
+            <summary>
+            应用程序数据传输对象
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Security.ApplicationDto.ToString">
+            <summary>
+            输出应用程序状态
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ApplicationDto.Code">
+            <summary>
+            应用程序编码
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ApplicationDto.Name">
+            <summary>
+            应用程序名称
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ApplicationDto.Note">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ApplicationDto.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ApplicationDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ApplicationDto.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Dtos.Security.ApplicationDtoExtension">
+            <summary>
+            应用程序数据传输对象扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Security.ApplicationDtoExtension.ToEntity(Applications.Services.Dtos.Security.ApplicationDto)">
+            <summary>
+            转换为应用程序实体
+            </summary>
+            <param name="dto">应用程序数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Dtos.Security.ApplicationDtoExtension.ToDto(Applications.Domains.Security.Models.Application)">
+            <summary>
+            转换为应用程序数据传输对象
+            </summary>
+            <param name="entity">应用程序实体</param>
+        </member>
+        <member name="T:Applications.Services.Dtos.Commons.AreaDto">
+            <summary>
+            地区数据传输对象
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Commons.AreaDto.ToString">
+            <summary>
+            输出地区状态
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.AreaDto.ParentId">
+            <summary>
+            父编号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.AreaDto.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.AreaDto.Text">
+            <summary>
+            地区名称
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.AreaDto.Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.AreaDto.Level">
+            <summary>
+            级数
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.AreaDto.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.AreaDto.PinYin">
+            <summary>
+            拼音简码
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.AreaDto.FullPinYin">
+            <summary>
+            全拼
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.AreaDto.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.AreaDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.AreaDto.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.AreaDto.state">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.AreaDto.children">
+            <summary>
+            子节点集合
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Dtos.Commons.AreaDtoExtension">
+            <summary>
+            地区数据传输对象扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Commons.AreaDtoExtension.ToEntity(Applications.Services.Dtos.Commons.AreaDto)">
+            <summary>
+            转换为地区实体
+            </summary>
+            <param name="dto">地区数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Dtos.Commons.AreaDtoExtension.ToDto(Applications.Domains.Commons.Models.Area)">
+            <summary>
+            转换为地区数据传输对象
+            </summary>
+            <param name="entity">地区实体</param>
+        </member>
+        <member name="T:Applications.Services.Dtos.Commons.DicDto">
+            <summary>
+            字典数据传输对象
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Commons.DicDto.ToString">
+            <summary>
+            输出字典状态
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.DicDto.ParentId">
+            <summary>
+            父编号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.DicDto.TenantId">
+            <summary>
+            租户编号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.DicDto.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.DicDto.Text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.DicDto.Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.DicDto.Level">
+            <summary>
+            级数
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.DicDto.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.DicDto.PinYin">
+            <summary>
+            拼音简码
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.DicDto.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.DicDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.DicDto.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.DicDto.state">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.DicDto.children">
+            <summary>
+            子节点集合
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Dtos.Commons.DicDtoExtension">
+            <summary>
+            字典数据传输对象扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Commons.DicDtoExtension.ToEntity(Applications.Services.Dtos.Commons.DicDto)">
+            <summary>
+            转换为字典实体
+            </summary>
+            <param name="dto">字典数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Dtos.Commons.DicDtoExtension.ToDto(Applications.Domains.Commons.Models.Dic)">
+            <summary>
+            转换为字典数据传输对象
+            </summary>
+            <param name="entity">字典实体</param>
+        </member>
+        <member name="T:Applications.Services.Dtos.Commons.IconCategoryDto">
+            <summary>
+            图标分类数据传输对象
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Commons.IconCategoryDto.ToString">
+            <summary>
+            输出图标分类状态
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconCategoryDto.TenantId">
+            <summary>
+            租户编号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconCategoryDto.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconCategoryDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconCategoryDto.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconCategoryDto.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Dtos.Commons.IconCategoryDtoExtension">
+            <summary>
+            图标分类数据传输对象扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Commons.IconCategoryDtoExtension.ToEntity(Applications.Services.Dtos.Commons.IconCategoryDto)">
+            <summary>
+            转换为图标分类实体
+            </summary>
+            <param name="dto">图标分类数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Dtos.Commons.IconCategoryDtoExtension.ToDto(Applications.Domains.Commons.Models.IconCategory)">
+            <summary>
+            转换为图标分类数据传输对象
+            </summary>
+            <param name="entity">图标分类实体</param>
+        </member>
+        <member name="T:Applications.Services.Dtos.Commons.IconDto">
+            <summary>
+            图标数据传输对象
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Commons.IconDto.ToString">
+            <summary>
+            输出图标状态
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Commons.IconDto.GetCategoryName">
+            <summary>
+            获取分类名称
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconDto.CategoryName">
+            <summary>
+            图标分类
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconDto.CategoryId">
+            <summary>
+            图标分类编号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconDto.TenantId">
+            <summary>
+            租户编号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconDto.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconDto.Name">
+            <summary>
+            图标名称
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconDto.Path">
+            <summary>
+            图标路径
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconDto.ClassName">
+            <summary>
+            类名
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconDto.Size">
+            <summary>
+            图标大小
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconDto.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconDto.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconDto.Css">
+            <summary>
+            Css代码
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Commons.IconDto.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Dtos.Commons.IconDtoExtension">
+            <summary>
+            图标数据传输对象扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Commons.IconDtoExtension.ToEntity(Applications.Services.Dtos.Commons.IconDto)">
+            <summary>
+            转换为图标实体
+            </summary>
+            <param name="dto">图标数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Dtos.Commons.IconDtoExtension.ToDto(Applications.Domains.Commons.Models.Icon)">
+            <summary>
+            转换为图标数据传输对象
+            </summary>
+            <param name="entity">图标实体</param>
+        </member>
+        <member name="T:Applications.Services.Dtos.Configs.SystemConfigCategoryDto">
+            <summary>
+            系统配置分类数据传输对象
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Configs.SystemConfigCategoryDto.ToString">
+            <summary>
+            输出系统配置分类状态
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Configs.SystemConfigCategoryDto.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Configs.SystemConfigCategoryDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Configs.SystemConfigCategoryDto.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Configs.SystemConfigCategoryDto.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Dtos.Configs.SystemConfigCategoryDtoExtension">
+            <summary>
+            系统配置分类数据传输对象扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Configs.SystemConfigCategoryDtoExtension.ToEntity(Applications.Services.Dtos.Configs.SystemConfigCategoryDto)">
+            <summary>
+            转换为系统配置分类实体
+            </summary>
+            <param name="dto">系统配置分类数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Dtos.Configs.SystemConfigCategoryDtoExtension.ToDto(Applications.Domains.Configs.Models.SystemConfigCategory)">
+            <summary>
+            转换为系统配置分类数据传输对象
+            </summary>
+            <param name="entity">系统配置分类实体</param>
+        </member>
+        <member name="T:Applications.Services.Dtos.Configs.SystemConfigDto">
+            <summary>
+            系统配置数据传输对象
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Configs.SystemConfigDto.ToString">
+            <summary>
+            输出系统配置状态
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Configs.SystemConfigDto.GetCategoryName">
+            <summary>
+            获取分类名称
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Configs.SystemConfigDto.CategoryId">
+            <summary>
+            配置分类编号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Configs.SystemConfigDto.CategoryName">
+            <summary>
+            配置分类
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Configs.SystemConfigDto.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Configs.SystemConfigDto.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Configs.SystemConfigDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Configs.SystemConfigDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Configs.SystemConfigDto.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Dtos.Configs.SystemConfigDtoExtension">
+            <summary>
+            系统配置数据传输对象扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Configs.SystemConfigDtoExtension.ToEntity(Applications.Services.Dtos.Configs.SystemConfigDto)">
+            <summary>
+            转换为系统配置实体
+            </summary>
+            <param name="dto">系统配置数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Dtos.Configs.SystemConfigDtoExtension.ToDto(Applications.Domains.Configs.Models.SystemConfig)">
+            <summary>
+            转换为系统配置数据传输对象
+            </summary>
+            <param name="entity">系统配置实体</param>
+        </member>
+        <member name="T:Applications.Services.Dtos.Security.ResourceDto">
+            <summary>
+            资源数据传输对象
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Security.ResourceDto.ToString">
+            <summary>
+            输出资源状态
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.ApplicationId">
+            <summary>
+            应用程序编号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.ParentId">
+            <summary>
+            父编号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.Level">
+            <summary>
+            级数
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.state">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.Uri">
+            <summary>
+            资源标识
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.Url">
+            <summary>
+            Url
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.Name">
+            <summary>
+            资源名称
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.Type">
+            <summary>
+            资源类型
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.SmallIcon">
+            <summary>
+            小图标
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.LargeIcon">
+            <summary>
+            大图标
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.Extend">
+            <summary>
+            扩展
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.Note">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.PinYin">
+            <summary>
+            拼音简码
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.SortId">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Dtos.Security.ResourceDto.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Dtos.Security.ResourceDtoExtension">
+            <summary>
+            资源数据传输对象扩展
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Dtos.Security.ResourceDtoExtension.ToEntity(Applications.Services.Dtos.Security.ResourceDto)">
+            <summary>
+            转换为资源实体
+            </summary>
+            <param name="dto">资源数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Dtos.Security.ResourceDtoExtension.ToDto(Applications.Domains.Security.Models.Resource)">
+            <summary>
+            转换为资源数据传输对象
+            </summary>
+            <param name="entity">资源实体</param>
+        </member>
+        <member name="T:Applications.Services.Impl.Commons.AreaService">
+            <summary>
+            地区服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.AreaService.#ctor(Applications.IApplicationUnitOfWork,Applications.Domains.Commons.Repositories.IAreaRepository)">
+            <summary>
+            初始化地区服务
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+            <param name="repository">地区仓储</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.AreaService.ToDto(Applications.Domains.Commons.Models.Area)">
+            <summary>
+            转换为数据传输对象
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.AreaService.ToEntity(Applications.Services.Dtos.Commons.AreaDto)">
+            <summary>
+            转换为实体
+            </summary>
+            <param name="dto">数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.AreaService.Create(System.String)">
+            <summary>
+            创建新实体
+            </summary>
+            <param name="parentId">父字典标识</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.AreaService.GetQuery(Applications.Domains.Commons.Queries.AreaQuery)">
+            <summary>
+            获取查询对象
+            </summary>
+            <param name="query">地区查询参数</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.AreaService.SaveBefore(System.Collections.Generic.List{Applications.Services.Dtos.Commons.AreaDto},System.Collections.Generic.List{Applications.Services.Dtos.Commons.AreaDto},System.Collections.Generic.List{Applications.Services.Dtos.Commons.AreaDto})">
+            <summary>
+            保存前操作
+            </summary>
+            <param name="addList">新增列表</param>
+            <param name="updateList">修改列表</param>
+            <param name="deleteList">删除列表</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.AreaService.Validate(System.Collections.Generic.IEnumerable{Applications.Services.Dtos.Commons.AreaDto})">
+            <summary>
+            验证
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.AreaService.ThrowRepeatException(System.String)">
+            <summary>
+            抛出编码重复异常
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.AreaService.AddBefore(Applications.Domains.Commons.Models.Area)">
+            <summary>
+            添加前操作
+            </summary>
+            <param name="entity">字典实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.AreaService.UpdateBefore(Applications.Domains.Commons.Models.Area,Applications.Domains.Commons.Models.Area)">
+            <summary>
+            修改前操作
+            </summary>
+            <param name="newEntity">新实体</param>
+            <param name="oldEntity">数据库中的旧实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.AreaService.ValidateUpdateExists(Applications.Domains.Commons.Models.Area)">
+            <summary>
+            验证更新时是否存在重复地区
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.AreaService.Load(System.Nullable{System.Guid})">
+            <summary>
+            加载地区数据
+            </summary>
+            <param name="parentId">父编号</param>
+        </member>
+        <member name="P:Applications.Services.Impl.Commons.AreaService.Repository">
+            <summary>
+            地区仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Impl.Commons.DicService">
+            <summary>
+            字典服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.DicService.#ctor(Applications.IApplicationUnitOfWork,Applications.Domains.Commons.Repositories.IDicRepository)">
+            <summary>
+            初始化字典服务
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+            <param name="repository">字典仓储</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.DicService.ToDto(Applications.Domains.Commons.Models.Dic)">
+            <summary>
+            转换为数据传输对象
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.DicService.ToEntity(Applications.Services.Dtos.Commons.DicDto)">
+            <summary>
+            转换为实体
+            </summary>
+            <param name="dto">数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.DicService.GetQuery(Applications.Domains.Commons.Queries.DicQuery)">
+            <summary>
+            获取查询对象
+            </summary>
+            <param name="query">字典查询参数</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.DicService.Create(System.String)">
+            <summary>
+            创建新实体
+            </summary>
+            <param name="parentId">父字典标识</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.DicService.SaveBefore(System.Collections.Generic.List{Applications.Services.Dtos.Commons.DicDto},System.Collections.Generic.List{Applications.Services.Dtos.Commons.DicDto},System.Collections.Generic.List{Applications.Services.Dtos.Commons.DicDto})">
+            <summary>
+            保存前操作
+            </summary>
+            <param name="addList">新增列表</param>
+            <param name="updateList">修改列表</param>
+            <param name="deleteList">删除列表</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.DicService.Validate(System.Collections.Generic.IEnumerable{Applications.Services.Dtos.Commons.DicDto})">
+            <summary>
+            验证
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.DicService.ThrowRepeatException(System.String)">
+            <summary>
+            抛出编码重复异常
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.DicService.AddBefore(Applications.Domains.Commons.Models.Dic)">
+            <summary>
+            添加前操作
+            </summary>
+            <param name="entity">字典实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.DicService.UpdateBefore(Applications.Domains.Commons.Models.Dic,Applications.Domains.Commons.Models.Dic)">
+            <summary>
+            修改前操作
+            </summary>
+            <param name="newEntity">新实体</param>
+            <param name="oldEntity">数据库中的旧实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.DicService.ValidateUpdateExists(Applications.Domains.Commons.Models.Dic)">
+            <summary>
+            验证更新时是否存在重复编码
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.DicService.Load(System.String,System.Nullable{System.Guid})">
+            <summary>
+            根据编码加载字典列表
+            </summary>
+            <param name="code">字典编码</param>
+            <param name="tenantId">租户编号</param>
+        </member>
+        <member name="P:Applications.Services.Impl.Commons.DicService.Repository">
+            <summary>
+            字典仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Impl.Commons.IconCategoryService">
+            <summary>
+            图标分类服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconCategoryService.#ctor(Applications.IApplicationUnitOfWork,Applications.Domains.Commons.Repositories.IIconCategoryRepository)">
+            <summary>
+            初始化图标分类服务
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+            <param name="repository">图标分类仓储</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconCategoryService.ToDto(Applications.Domains.Commons.Models.IconCategory)">
+            <summary>
+            转换为Dto
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconCategoryService.ToEntity(Applications.Services.Dtos.Commons.IconCategoryDto)">
+            <summary>
+            转换为实体
+            </summary>
+            <param name="dto">数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconCategoryService.GetAll">
+            <summary>
+            获取全部图标分类
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconCategoryService.GetQuery(Applications.Domains.Commons.Queries.IconCategoryQuery)">
+            <summary>
+            获取查询对象
+            </summary>
+            <param name="query">图标分类查询参数</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconCategoryService.AddBefore(Applications.Domains.Commons.Models.IconCategory)">
+            <summary>
+            添加前操作
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconCategoryService.ThrowRepeatException(System.String)">
+            <summary>
+            抛出重复异常
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconCategoryService.UpdateBefore(Applications.Domains.Commons.Models.IconCategory,Applications.Domains.Commons.Models.IconCategory)">
+            <summary>
+            修改前操作
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Impl.Commons.IconCategoryService.Repository">
+            <summary>
+            图标分类仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Impl.Commons.IconService">
+            <summary>
+            图标服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconService.#ctor(Applications.IApplicationUnitOfWork,Applications.Domains.Commons.Repositories.IIconRepository,Applications.Domains.Commons.Services.IIconManager)">
+            <summary>
+            初始化图标服务
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+            <param name="repository">图标仓储</param>
+            <param name="iconManager">图标管理器</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconService.ToDto(Applications.Domains.Commons.Models.Icon)">
+            <summary>
+            转换为Dto
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconService.ToEntity(Applications.Services.Dtos.Commons.IconDto)">
+            <summary>
+            转换为实体
+            </summary>
+            <param name="dto">数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconService.GetQuery(Applications.Domains.Commons.Queries.IconQuery)">
+            <summary>
+            获取查询对象
+            </summary>
+            <param name="query">图标查询参数</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconService.Upload(System.String)">
+            <summary>
+            上传图标
+            </summary>
+            <param name="categoryId">图标分类编号</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Commons.IconService.Delete(System.String)">
+            <summary>
+            删除图标
+            </summary>
+            <param name="ids">图标编号集合</param>
+        </member>
+        <member name="P:Applications.Services.Impl.Commons.IconService.Repository">
+            <summary>
+            图标仓储
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Impl.Commons.IconService.IconManager">
+            <summary>
+            图标管理器
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Impl.Configs.SystemConfigCategoryService">
+            <summary>
+            系统配置分类服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigCategoryService.#ctor(Applications.IApplicationUnitOfWork,Applications.Domains.Configs.Repositories.ISystemConfigCategoryRepository)">
+            <summary>
+            初始化系统配置分类服务
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+            <param name="repository">系统配置分类仓储</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigCategoryService.ToDto(Applications.Domains.Configs.Models.SystemConfigCategory)">
+            <summary>
+            转换为Dto
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigCategoryService.ToEntity(Applications.Services.Dtos.Configs.SystemConfigCategoryDto)">
+            <summary>
+            转换为实体
+            </summary>
+            <param name="dto">数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigCategoryService.GetAll">
+            <summary>
+            获取全部系统配置分类
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigCategoryService.GetQuery(Applications.Domains.Configs.Queries.SystemConfigCategoryQuery)">
+            <summary>
+            获取查询对象
+            </summary>
+            <param name="query">系统配置分类查询参数</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigCategoryService.AddBefore(Applications.Domains.Configs.Models.SystemConfigCategory)">
+            <summary>
+            添加前操作
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigCategoryService.ThrowRepeatException(System.String)">
+            <summary>
+            抛出重复异常
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigCategoryService.UpdateBefore(Applications.Domains.Configs.Models.SystemConfigCategory,Applications.Domains.Configs.Models.SystemConfigCategory)">
+            <summary>
+            修改前操作
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Impl.Configs.SystemConfigCategoryService.Repository">
+            <summary>
+            系统配置分类仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Impl.Configs.SystemConfigService">
+            <summary>
+            系统配置服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigService.#ctor(Applications.IApplicationUnitOfWork,Applications.Domains.Configs.Repositories.ISystemConfigRepository)">
+            <summary>
+            初始化系统配置服务
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+            <param name="repository">系统配置仓储</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigService.ToDto(Applications.Domains.Configs.Models.SystemConfig)">
+            <summary>
+            转换为Dto
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigService.ToEntity(Applications.Services.Dtos.Configs.SystemConfigDto)">
+            <summary>
+            转换为实体
+            </summary>
+            <param name="dto">数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigService.GetQuery(Applications.Domains.Configs.Queries.SystemConfigQuery)">
+            <summary>
+            获取查询对象
+            </summary>
+            <param name="query">系统配置查询参数</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigService.SaveBefore(System.Collections.Generic.List{Applications.Services.Dtos.Configs.SystemConfigDto},System.Collections.Generic.List{Applications.Services.Dtos.Configs.SystemConfigDto},System.Collections.Generic.List{Applications.Services.Dtos.Configs.SystemConfigDto})">
+            <summary>
+            保存前操作
+            </summary>
+            <param name="addList">新增列表</param>
+            <param name="updateList">修改列表</param>
+            <param name="deleteList">删除列表</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigService.Validate(System.Collections.Generic.IEnumerable{Applications.Services.Dtos.Configs.SystemConfigDto})">
+            <summary>
+            验证
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigService.ThrowRepeatException(System.String)">
+            <summary>
+            抛出编码重复异常
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigService.AddBefore(Applications.Domains.Configs.Models.SystemConfig)">
+            <summary>
+            添加前操作
+            </summary>
+            <param name="entity">配置实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigService.UpdateBefore(Applications.Domains.Configs.Models.SystemConfig,Applications.Domains.Configs.Models.SystemConfig)">
+            <summary>
+            修改前操作
+            </summary>
+            <param name="newEntity">新实体</param>
+            <param name="oldEntity">数据库中的旧实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Configs.SystemConfigService.ValidateUpdateExists(Applications.Domains.Configs.Models.SystemConfig)">
+            <summary>
+            验证更新时是否存在重复编码
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Impl.Configs.SystemConfigService.Repository">
+            <summary>
+            系统配置仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Impl.Security.ApplicationService">
+            <summary>
+            应用程序服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.#ctor(Applications.IApplicationUnitOfWork,Applications.Domains.Security.Repositories.IApplicationRepository,Util.Exports.IExportFactory)">
+            <summary>
+            初始化应用程序服务
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+            <param name="repository">应用程序仓储</param>
+            <param name="exportFactory">文件导出操作工厂</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.ToDto(Applications.Domains.Security.Models.Application)">
+            <summary>
+            转换为数据传输对象
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.ToEntity(Applications.Services.Dtos.Security.ApplicationDto)">
+            <summary>
+            转换为实体
+            </summary>
+            <param name="dto">数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.SaveBefore(System.Collections.Generic.List{Applications.Services.Dtos.Security.ApplicationDto},System.Collections.Generic.List{Applications.Services.Dtos.Security.ApplicationDto},System.Collections.Generic.List{Applications.Services.Dtos.Security.ApplicationDto})">
+            <summary>
+            保存前操作
+            </summary>
+            <param name="addList">新增列表</param>
+            <param name="updateList">修改列表</param>
+            <param name="deleteList">删除列表</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.Validate(System.Collections.Generic.IEnumerable{Applications.Services.Dtos.Security.ApplicationDto})">
+            <summary>
+            验证
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.ThrowRepeatException(System.String)">
+            <summary>
+            抛出编码重复异常
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.AddBefore(Applications.Domains.Security.Models.Application)">
+            <summary>
+            添加前操作
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.UpdateBefore(Applications.Domains.Security.Models.Application,Applications.Domains.Security.Models.Application)">
+            <summary>
+            修改前操作
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.Create">
+            <summary>
+            创建应用程序
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.GetQuery(Applications.Domains.Security.Queries.ApplicationQuery)">
+            <summary>
+            获取查询对象
+            </summary>
+            <param name="query">应用程序查询参数</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.Export">
+            <summary>
+            导出
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.Enable(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            启用
+            </summary>
+            <param name="ids">应用程序编号</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.Enable(System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.GetCaption(System.Boolean)">
+            <summary>
+            获取标题
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ApplicationService.Disable(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            冻结
+            </summary>
+            <param name="ids">应用程序编号</param>
+        </member>
+        <member name="P:Applications.Services.Impl.Security.ApplicationService.Repository">
+            <summary>
+            应用程序仓储
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Impl.Security.ApplicationService.ExportFactory">
+            <summary>
+            文件导出操作工厂
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Impl.Security.ResourceService">
+            <summary>
+            资源服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ResourceService.#ctor(Applications.IApplicationUnitOfWork,Applications.Domains.Security.Repositories.IResourceRepository)">
+            <summary>
+            初始化资源服务
+            </summary>
+            <param name="unitOfWork">工作单元</param>
+            <param name="repository">资源仓储</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ResourceService.ToDto(Applications.Domains.Security.Models.Resource)">
+            <summary>
+            转换为Dto
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ResourceService.ToEntity(Applications.Services.Dtos.Security.ResourceDto)">
+            <summary>
+            转换为实体
+            </summary>
+            <param name="dto">数据传输对象</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ResourceService.Create(System.String)">
+            <summary>
+            创建Dto
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.ResourceService.GetQuery(Applications.Domains.Security.Queries.ResourceQuery)">
+            <summary>
+            获取查询对象
+            </summary>
+            <param name="query">资源查询参数</param>
+        </member>
+        <member name="P:Applications.Services.Impl.Security.ResourceService.Repository">
+            <summary>
+            资源仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Impl.Security.SystemService">
+            <summary>
+            系统服务
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.SystemService.#ctor(Applications.Domains.Core.Contracts.ISiteManager,Applications.Domains.Security.Repositories.IResourceRepository)">
+            <summary>
+            初始化安全服务
+            </summary>
+            <param name="siteManager">站点管理器</param>
+            <param name="resourceRepository">资源仓储</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.SystemService.GetSkins">
+            <summary>
+            获取皮肤列表
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.SystemService.GetMenuStyles">
+            <summary>
+            获取菜单样式列表
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.SystemService.GetSkinDescription(System.String)">
+            <summary>
+            获取皮肤描述
+            </summary>
+            <param name="skin">皮肤</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.SystemService.GetMenuStyleDescription(System.String)">
+            <summary>
+            获取菜单样式描述
+            </summary>
+            <param name="style">菜单样式</param>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.SystemService.GetSkin">
+            <summary>
+            获取皮肤
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Impl.Security.SystemService.GetModules">
+            <summary>
+            获取模块列表
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Impl.Security.SystemService.SiteManager">
+            <summary>
+            站点管理器
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Impl.Security.SystemService.ResourceRepository">
+            <summary>
+            资源仓储
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Configs.SystemInfo">
+            <summary>
+            系统信息
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Configs.SystemInfo.OrganizationId">
+            <summary>
+            机构编号
+            </summary>
+        </member>
+        <member name="P:Applications.Services.Configs.SystemInfo.Organization">
+            <summary>
+            机构名称
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Security.AuthorizeModule">
+            <summary>
+            管理系统授权模块
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Security.AuthorizeModule.GetIdentity(System.Guid)">
+            <summary>
+            获取用户标识
+            </summary>
+            <param name="userId">用户编号</param>
+        </member>
+        <member name="M:Applications.Services.Security.AuthorizeModule.Init(Util.Security.Identity)">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Security.AuthorizeModule.GetSecurityService">
+            <summary>
+            获取
+            </summary>
+        </member>
+        <member name="T:Applications.Services.Systems.SiteManager">
+            <summary>
+            站点管理器
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Systems.SiteManager.GetSkins">
+            <summary>
+            获取皮肤列表
+            </summary>
+        </member>
+        <member name="M:Applications.Services.Systems.SiteManager.GetMenuStyles">
+            <summary>
+            获取菜单样式列表
+            </summary>
+        </member>
+    </members>
+</doc>

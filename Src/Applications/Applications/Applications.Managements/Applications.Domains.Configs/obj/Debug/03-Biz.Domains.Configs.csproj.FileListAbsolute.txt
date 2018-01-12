@@ -1,0 +1,8 @@
+D:\Yun\Release\Biz.Domains.Configs.xml
+D:\Yun\Release\Biz.Domains.Configs.dll
+D:\Yun\Release\Biz.Domains.Configs.pdb
+D:\Yun\BusinessFramework\Biz\Biz.Domains.Configs\obj\Debug\03-Biz.Domains.Configs.csprojResolveAssemblyReference.cache
+D:\Yun\BusinessFramework\Biz\Biz.Domains.Configs\obj\Debug\Biz.Domains.Configs.ConfigResource.resources
+D:\Yun\BusinessFramework\Biz\Biz.Domains.Configs\obj\Debug\03-Biz.Domains.Configs.csproj.GenerateResource.Cache
+D:\Yun\BusinessFramework\Biz\Biz.Domains.Configs\obj\Debug\Biz.Domains.Configs.dll
+D:\Yun\BusinessFramework\Biz\Biz.Domains.Configs\obj\Debug\Biz.Domains.Configs.pdb

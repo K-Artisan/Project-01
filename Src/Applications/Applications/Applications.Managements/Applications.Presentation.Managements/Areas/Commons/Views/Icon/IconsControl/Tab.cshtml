@@ -1,0 +1,33 @@
+﻿@model IconListViewModel
+@{
+    var x = Html.EasyUi();
+}
+@*脚本*@
+<script type="text/javascript">
+    $(function () {
+        //点击图标，查找带回
+        $(".li img").click(function () {
+            $.easyui.grid.lookup($(this).attr("class"));
+            $.easyui.closeDialog();
+        });
+    });
+</script>
+@using ( x.Layout( true ).Begin() ) {
+    using ( x.LayoutRegion().Center().Begin() ) {
+        @*图标列表*@
+        <ul class="iconList">
+            @foreach ( var icon in Model.Icons ) {
+                <li class="li" title="@icon.Name" style="width: @(icon.Width)px;height: @(icon.Height)px">
+                    <img class="@icon.ClassName" width="@icon.Width" height="@icon.Height" />
+                </li>
+            }
+        </ul>
+    }
+    using ( x.LayoutRegion().Bottom().Height( 32 ).Begin() ) {
+        @*分页*@
+        @(Html.EasyUi().Pagination().AddClass( "pagination" ).PageList( 50, 100, 200, 500 ).PageNumber( Model.Icons.Page )
+            .PageSize( Model.Icons.PageSize ).Total( Model.Icons.TotalCount )
+            .Url( string.Format( "/Commons/Icon/GetIconTab?Width={0}&Height={1}&CategoryId={2}", Model.Width, Model.Height, Model.CategoryId ), "refreshTab" )
+        )
+    }
+}

@@ -1,0 +1,49 @@
+﻿<%@ Template Language="C#" TargetLanguage="C#" Debug="True" Encoding="UTF-8" %>
+
+<%@ Assembly Src="..\Common\Model.cs" %>
+<%@ Assembly Src="..\Common\Extensions.cs" %>
+
+<%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Text.RegularExpressions" %>
+<%@ Import Namespace="SchemaMapper" %>
+
+<%@ Property Name="Entity" Type="SchemaMapper.Entity"  %>
+<%@ Property Name="Namespace" Type="System.String" %>
+<%-- Safe类名 --%>
+<% string SafeClassName = Entity.ClassName.ToSafeName(); %>
+<%-- 描述 --%>
+<% string Description = Entity.Description; %>
+@model <%= SafeClassName %>Dto
+@{
+    var x = @Html.EasyUi();
+}
+<div class="divForm">
+    <div class="formtitle"><%= Description %>管理</div>
+    @using ( x.Form( "form" ).AddClass( "form" ).Action( "/<%= Namespace %>/<%= SafeClassName.ToLower() %>/save" ).Begin() ) {
+    <% foreach(Property p in Entity.Properties) { %>
+        <% if( p.IsPrimaryKey.SafeValue() ) continue; %>
+        <% if( !(p.ColumnName == "Version" && p.DataType == DbType.Binary) ) {%>
+        <dl>
+            <dt>@Html.LabelFor( t => t.<%= p.PropertyName.ToSafeName() %> )</dt>
+            <dd>
+                <% if( p.SystemType == typeof(bool) ) {%>
+                @x.Combox( t => t.<%= p.PropertyName.ToSafeName() %> )
+                <% }else {%>
+                @x.TextBox( t => t.<%= p.PropertyName.ToSafeName() %> )
+                <% }%>
+            </dd>
+        </dl>
+        <% }else{%>
+        @Html.HiddenFor( t => t.<%= p.PropertyName.ToSafeName() %> )
+        <% }%>
+    <% }%>
+        @Html.HiddenFor( t => t.Id )
+        @Html.AntiForgeryToken()
+    }
+</div>
+<div id="dialogButtons">
+    @x.Button( "保 存" ).Icon( "icon-ok" ).Width( 90 ).Submit()
+    @x.DialogButton( "关 闭" ).Icon( "icon-cancel" ).Width( 90 ).CloseDialog()
+</div>

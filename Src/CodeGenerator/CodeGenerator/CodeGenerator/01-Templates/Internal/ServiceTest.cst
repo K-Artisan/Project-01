@@ -1,0 +1,105 @@
+﻿<%@ Template Language="C#" TargetLanguage="C#" Debug="True" Encoding="UTF-8" %>
+
+<%@ Assembly Src="..\Common\Model.cs" %>
+<%@ Assembly Src="..\Common\Extensions.cs" %>
+
+<%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Text.RegularExpressions" %>
+<%@ Import Namespace="SchemaMapper" %>
+
+<%@ Property Name="Entity" Type="SchemaMapper.Entity"  %>
+<%@ Property Name="Namespace" Type="System.String" %>
+<%-- Safe类名 --%>
+<% string SafeClassName = Entity.ClassName.ToSafeName(); %>
+<%-- 描述 --%>
+<% string Description = Entity.Description; %>
+using System;
+using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Util;
+using Util.Datas.SqlServer;
+using <%= Namespace %>.Domains.Models;
+using <%= Namespace %>.Domains.Repositories;
+using <%= Namespace %>.Services.Contracts;
+using <%= Namespace %>.Services.Dtos;
+using <%= Namespace %>.Tests.Integration.Dtos;
+
+namespace <%= Namespace %>.Tests.Integration.Services {
+    /// <summary>
+    /// <%= Description %>服务测试
+    /// </summary>
+    [TestClass]
+    public class <%= SafeClassName %>ServiceTest {
+        /// <summary>
+        /// 随机数生成器
+        /// </summary>
+        private RandomBuilder _builder;
+        /// <summary>
+        /// <%= Description %>服务
+        /// </summary>
+        private I<%= SafeClassName %>Service _service;
+        /// <summary>
+        /// <%= Description %>仓储
+        /// </summary>
+        private I<%= SafeClassName %>Repository _repository;
+        /// <summary>
+        /// 应用程序
+        /// </summary>
+        private <%= SafeClassName %>Dto _dto;        
+
+        /// <summary>
+        /// 测试初始化
+        /// </summary>
+        [TestInitialize]
+        public void TestInit() {
+            _builder = new RandomBuilder();
+            _repository = Ioc.Create<I<%= SafeClassName %>Repository>();
+            _service = Ioc.Create<I<%= SafeClassName %>Service>();
+            _dto = <%= SafeClassName %>DtoTest.Create2( <%= Entity.GetKeyDefault() %> );
+        }
+        
+        /// <summary>
+        /// 测试
+        /// </summary>
+        [TestMethod]
+        public void Test() {
+            var count = _repository.Count();
+            _service.Save( _dto );
+            Assert.AreEqual( count + 1, _repository.Count() );
+        }
+
+        /// <summary>
+        /// 添加测试数据
+        /// </summary>
+        [TestMethod]
+        [Ignore]
+        public void AddTestDatas() {            
+            for( int i = 0; i < 10; i++ ) {
+                var entities = new List<<%= SafeClassName %>>();
+                for( int j = 0; j < 10000; j++ ) {
+                    var entity = new <%= SafeClassName %>( <%= Entity.GetNewKey() %> );
+                    <% foreach(Property p in Entity.Properties) { %>
+                    <% if( p.ColumnName == "Version" && p.SystemType == typeof(byte) ) continue;%>
+                    <% if( p.IsPrimaryKey.SafeValue() ) continue; %>
+                    <% if( p.SystemType == typeof(string) || p.SystemType == typeof(char) ) {%>
+                    entity.<%= p.PropertyName.ToSafeName() %> = _builder.GenerateString( <%= p.MaxLength %> );
+                    <% } %>
+                    <% if( p.SystemType == typeof(bool) ) {%>
+                    entity.<%= p.PropertyName.ToSafeName() %> = _builder.GenerateBool();
+                    <% } %>
+                    <% if( p.SystemType == typeof(DateTime) ) {%>
+                    entity.<%= p.PropertyName.ToSafeName() %> = _builder.GenerateDate();
+                    <% } %>
+                    <% if( p.SystemType == typeof(short) || p.SystemType == typeof(int) || p.SystemType == typeof(long) ) {%>
+                    entity.<%= p.PropertyName.ToSafeName() %> = _builder.GenerateInt( 10000 );
+                    <% } %>
+                    <% } %>   
+                    entities.Add( entity );
+                }
+                _repository.BulkInsert( entities );
+            }
+        }
+    }
+}

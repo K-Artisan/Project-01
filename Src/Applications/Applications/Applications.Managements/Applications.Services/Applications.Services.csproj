@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{061C28B8-8A89-440F-B908-71FCECF835DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Applications.Services</RootNamespace>
+    <AssemblyName>Applications.Services</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <XsdCodeGenEnabled>True</XsdCodeGenEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <XsdCodeGenSerializerMode>XmlSerializer</XsdCodeGenSerializerMode>
+    <XsdCodeGenReuseTypesFlag>True</XsdCodeGenReuseTypesFlag>
+    <XsdCodeGenReuseTypesMode>All</XsdCodeGenReuseTypesMode>
+    <XsdCodeGenReferences />
+    <XsdCodeGenNamespaceMappings>%2a, Biz.Security.Services.ContractTypes</XsdCodeGenNamespaceMappings>
+    <XsdCodeGenCollectionTypes>System.Array%3bSystem.Collections.Generic.Dictionary`2</XsdCodeGenCollectionTypes>
+    <XsdCodeGenExcludedTypes />
+    <XsdCodeGenImportXmlTypes>True</XsdCodeGenImportXmlTypes>
+    <XsdCodeGenGenerateSerializableTypes>True</XsdCodeGenGenerateSerializableTypes>
+    <XsdCodeGenGenerateInternalTypes>False</XsdCodeGenGenerateInternalTypes>
+    <XsdCodeGenEnableDataBinding>False</XsdCodeGenEnableDataBinding>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Release\Applications.Services.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Release\Applications.Services.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configs\ConfigInfo.cs" />
+    <Compile Include="Configs\IocConfig.cs" />
+    <Compile Include="Configs\ApplicationConfig.cs" />
+    <Compile Include="Contracts\Security\IApplicationService.cs" />
+    <Compile Include="Contracts\Commons\IAreaService.cs" />
+    <Compile Include="Contracts\Commons\IDicService.cs" />
+    <Compile Include="Contracts\Commons\IIconCategoryService.cs" />
+    <Compile Include="Contracts\Commons\IIconService.cs" />
+    <Compile Include="Contracts\Security\IResourceService.cs" />
+    <Compile Include="Contracts\Configs\ISystemConfigCategoryService.cs" />
+    <Compile Include="Contracts\Configs\ISystemConfigService.cs" />
+    <Compile Include="Contracts\Security\ISystemService.cs" />
+    <Compile Include="Dtos\Security\ApplicationDto.cs" />
+    <Compile Include="Dtos\Security\ApplicationDtoExtension.cs" />
+    <Compile Include="Dtos\Commons\AreaDto.cs" />
+    <Compile Include="Dtos\Commons\AreaDtoExtension.cs" />
+    <Compile Include="Dtos\Commons\DicDto.cs" />
+    <Compile Include="Dtos\Commons\DicDtoExtension.cs" />
+    <Compile Include="Dtos\Commons\IconCategoryDto.cs" />
+    <Compile Include="Dtos\Commons\IconCategoryDtoExtension.cs" />
+    <Compile Include="Dtos\Commons\IconDto.cs" />
+    <Compile Include="Dtos\Commons\IconDtoExtension.cs" />
+    <Compile Include="Dtos\Configs\SystemConfigCategoryDto.cs" />
+    <Compile Include="Dtos\Configs\SystemConfigCategoryDtoExtension.cs" />
+    <Compile Include="Dtos\Configs\SystemConfigDto.cs" />
+    <Compile Include="Dtos\Configs\SystemConfigDtoExtension.cs" />
+    <Compile Include="Dtos\Security\ResourceDto.cs" />
+    <Compile Include="Dtos\Security\ResourceDtoExtension.cs" />
+    <Compile Include="Impl\Commons\AreaService.cs" />
+    <Compile Include="Impl\Commons\DicService.cs" />
+    <Compile Include="Impl\Commons\IconCategoryService.cs" />
+    <Compile Include="Impl\Commons\IconService.cs" />
+    <Compile Include="Impl\Configs\SystemConfigCategoryService.cs" />
+    <Compile Include="Impl\Configs\SystemConfigService.cs" />
+    <Compile Include="Impl\Security\ApplicationService.cs" />
+    <Compile Include="Impl\Security\ResourceService.cs" />
+    <Compile Include="Impl\Security\SystemService.cs" />
+    <Compile Include="Configs\SystemInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\AuthorizeModule.cs" />
+    <Compile Include="Systems\SiteManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util.Offices\Util.Offices.Npoi\Util.Offices.Npoi.csproj">
+      <Project>{1056347b-4279-4b25-bc28-6a4ea847f868}</Project>
+      <Name>Util.Offices.Npoi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.ApplicationServices\Util.ApplicationServices.csproj">
+      <Project>{5d5bef53-c733-4e5c-b28b-52e3a5b7f3c9}</Project>
+      <Name>Util.ApplicationServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Datas.Ef\03-Util.Datas.Ef.csproj">
+      <Project>{da4712ee-1e4f-4792-8ed5-e17c17c6ce73}</Project>
+      <Name>03-Util.Datas.Ef</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Datas.SqlServer\04-Util.Datas.SqlServer.csproj">
+      <Project>{ef0514a0-339c-4846-a3d6-5f41f3c2dc31}</Project>
+      <Name>04-Util.Datas.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Datas.Sql\02-Util.Datas.Sql.csproj">
+      <Project>{f43f7230-2cf2-4f5d-a668-a116771a6e2c}</Project>
+      <Name>02-Util.Datas.Sql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Datas\01-Util.Datas.csproj">
+      <Project>{c4b929b6-117b-4c6f-a92b-eeb07309bee5}</Project>
+      <Name>01-Util.Datas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.DI.Autofac\Util.DI.Autofac.csproj">
+      <Project>{745e6176-ec18-4af5-be4b-0075312de637}</Project>
+      <Name>Util.DI.Autofac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Domains\Util.Domains.csproj">
+      <Project>{69edfba0-f39e-421b-9949-253f8b269b22}</Project>
+      <Name>Util.Domains</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Json\Util.Json.csproj">
+      <Project>{ed8e071e-aaca-4797-9aa7-7b03dad45225}</Project>
+      <Name>Util.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Logs.Log4\Util.Logs.Log4.csproj">
+      <Project>{e4f100cf-3865-4f20-a87a-33a009dafa8c}</Project>
+      <Name>Util.Logs.Log4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Security\Util.Security.csproj">
+      <Project>{a0f4b251-cce2-4f7d-afc1-37651d8a131f}</Project>
+      <Name>Util.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Uploaders.WebUploader\Util.Uploaders.WebUploader.csproj">
+      <Project>{9f0e1c7e-5830-465e-81ec-a0d370f64b81}</Project>
+      <Name>Util.Uploaders.WebUploader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Webs.EasyUi\Util.Webs.EasyUi.csproj">
+      <Project>{194e31a3-1ce9-4ccc-b95b-412498eedd25}</Project>
+      <Name>Util.Webs.EasyUi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util.Webs\Util.Webs.csproj">
+      <Project>{767e1c43-c168-44e4-8cf1-69d001efaa59}</Project>
+      <Name>Util.Webs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Util\Util\Util.Core.csproj">
+      <Project>{eece9b01-394b-4b1a-964a-6d9dcef14fa2}</Project>
+      <Name>Util.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Datas.Ef.MySql\03-Applications.Datas.Ef.MySql.csproj">
+      <Project>{dc54f7dc-2ccb-45aa-a60a-7af31afb6259}</Project>
+      <Name>03-Applications.Datas.Ef.MySql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Datas.Ef\02-Applications.Datas.Ef.csproj">
+      <Project>{bbaa7116-2559-4212-9ca2-c79f7d203b88}</Project>
+      <Name>02-Applications.Datas.Ef</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Commons\02-Applications.Domains.Commons.csproj">
+      <Project>{809e0858-ed75-4eb8-b235-1a9eff66a9af}</Project>
+      <Name>02-Applications.Domains.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Configs\03-Applications.Domains.Configs.csproj">
+      <Project>{87038014-90bd-4bf0-9892-90186bbcbd5d}</Project>
+      <Name>03-Applications.Domains.Configs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Core\01-Applications.Domains.Core.csproj">
+      <Project>{f6fcd8cf-cc16-42c4-bb3b-5a7fe0b7cbe5}</Project>
+      <Name>01-Applications.Domains.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Security\04-Applications.Domains.Security.csproj">
+      <Project>{9542cda4-4c33-4545-8633-4e95aaaa3b77}</Project>
+      <Name>04-Applications.Domains.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Systems\05-Applications.Domains.Systems.csproj">
+      <Project>{8b145f1f-7e36-4b8f-80b0-f10ce7fa0115}</Project>
+      <Name>05-Applications.Domains.Systems</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Infrastructure.Core\01-Applications.Infrastructure.Core.csproj">
+      <Project>{528942ac-5c99-4457-a0c6-7574db55cf1d}</Project>
+      <Name>01-Applications.Infrastructure.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Presentation.Managements.Extensions\02-Applications.Presentation.Managements.Extensions.csproj">
+      <Project>{491ab32d-7026-4e27-9826-8f56bb009e92}</Project>
+      <Name>02-Applications.Presentation.Managements.Extensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="说明.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VSToolsPath Condition="'$(VSToolsPath)' == '' and '$(VisualStudioVersion)' != '' and '$(VisualStudioVersion)' != '11.0'">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio</VSToolsPath>
+    <WcfServiceModelTargetPath>$(VSToolsPath)\WCF</WcfServiceModelTargetPath>
+  </PropertyGroup>
+  <Import Project="$(WcfServiceModelTargetPath)\Microsoft.VisualStudio.ServiceModel.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
+        <WcfProjectProperties>
+          <AutoStart>False</AutoStart>
+        </WcfProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

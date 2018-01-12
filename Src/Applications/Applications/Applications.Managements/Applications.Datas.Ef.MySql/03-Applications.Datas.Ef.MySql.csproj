@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC54F7DC-2CCB-45AA-A60A-7AF31AFB6259}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Applications.Datas.Ef.MySql</RootNamespace>
+    <AssemblyName>Applications.Datas.Ef.MySql</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Release\Applications.Datas.Ef.MySql.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Release\Applications.Datas.Ef.MySql.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Util.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=39e1029071635b8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\Util.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Datas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=39e1029071635b8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\Util.Datas.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Datas.Ef, Version=1.0.0.0, Culture=neutral, PublicKeyToken=39e1029071635b8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\Util.Datas.Ef.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Datas.MySql, Version=1.0.0.0, Culture=neutral, PublicKeyToken=39e1029071635b8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\Util.Datas.MySql.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Datas.Sql, Version=1.0.0.0, Culture=neutral, PublicKeyToken=39e1029071635b8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\Util.Datas.Sql.dll</HintPath>
+    </Reference>
+    <Reference Include="Util.Domains, Version=1.0.0.0, Culture=neutral, PublicKeyToken=39e1029071635b8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\Util.Domains.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mappings\Commons\AreaMap.cs" />
+    <Compile Include="Mappings\Commons\DicMap.cs" />
+    <Compile Include="Mappings\Commons\IconCategoryMap.cs" />
+    <Compile Include="Mappings\Commons\IconMap.cs" />
+    <Compile Include="Mappings\Configs\SystemConfigCategoryMap.cs" />
+    <Compile Include="Mappings\Configs\SystemConfigMap.cs" />
+    <Compile Include="Mappings\Systems\ApplicationMap.cs" />
+    <Compile Include="Mappings\Systems\ResourceMap.cs" />
+    <Compile Include="MySqlApplicationUnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Applications.Datas.Ef\02-Applications.Datas.Ef.csproj">
+      <Project>{bbaa7116-2559-4212-9ca2-c79f7d203b88}</Project>
+      <Name>02-Applications.Datas.Ef</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Commons\02-Applications.Domains.Commons.csproj">
+      <Project>{809e0858-ed75-4eb8-b235-1a9eff66a9af}</Project>
+      <Name>02-Applications.Domains.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Configs\03-Applications.Domains.Configs.csproj">
+      <Project>{87038014-90bd-4bf0-9892-90186bbcbd5d}</Project>
+      <Name>03-Applications.Domains.Configs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Core\01-Applications.Domains.Core.csproj">
+      <Project>{f6fcd8cf-cc16-42c4-bb3b-5a7fe0b7cbe5}</Project>
+      <Name>01-Applications.Domains.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Domains.Security\04-Applications.Domains.Security.csproj">
+      <Project>{9542cda4-4c33-4545-8633-4e95aaaa3b77}</Project>
+      <Name>04-Applications.Domains.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications.Infrastructure.Core\01-Applications.Infrastructure.Core.csproj">
+      <Project>{528942ac-5c99-4457-a0c6-7574db55cf1d}</Project>
+      <Name>01-Applications.Infrastructure.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

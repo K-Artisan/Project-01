@@ -1,0 +1,6 @@
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Presentation.Managements.Extensions.xml
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Presentation.Managements.Extensions.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Release\Applications.Presentation.Managements.Extensions.pdb
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Presentation.Managements.Extensions\obj\Debug\02-Applications.Presentation.Managements.Extensions.csprojResolveAssemblyReference.cache
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Presentation.Managements.Extensions\obj\Debug\Applications.Presentation.Managements.Extensions.dll
+E:\CodeLib\OpenSourse\通用框架\Applications.2015.5.26.1\Applications\Applications.Managements\Applications.Presentation.Managements.Extensions\obj\Debug\Applications.Presentation.Managements.Extensions.pdb

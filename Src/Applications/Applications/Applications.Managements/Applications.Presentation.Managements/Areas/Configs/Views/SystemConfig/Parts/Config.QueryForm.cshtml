@@ -1,0 +1,42 @@
+﻿@model SystemConfigQuery
+@{
+    var x = @Html.EasyUi();
+}
+<div id="divQuery" class="divQueryForm">
+    @using ( x.Form( "formQuery" ).AddClass( "form" ).Begin() ) {
+        <dl>
+            <dt>@Html.LabelFor( t => t.Code )</dt>
+            <dd>
+                @x.TextBox( t => t.Code )
+            </dd>
+        </dl>
+        <dl>
+            <dt>@Html.LabelFor( t => t.Value )</dt>
+            <dd>
+                @x.TextBox( t => t.Value )
+            </dd>
+        </dl>
+        <dl>
+            <dt>@Html.LabelFor( t => t.Description )</dt>
+            <dd>
+                @x.TextBox( t => t.Description )
+            </dd>
+        </dl>
+        <dl>
+            <dt>@Html.LabelFor( t => t.BeginCreateTime )</dt>
+            <dd>
+                @x.TextBox( t => t.BeginCreateTime )
+            </dd>
+        </dl>
+        <dl>
+            <dt>@Html.LabelFor( t => t.EndCreateTime )</dt>
+            <dd>
+                @x.TextBox( t => t.EndCreateTime )
+            </dd>
+        </dl>
+        <span class="button">
+            @x.Button( "查 询" ).Width( 70 ).Icon( "icon-search" ).Query()
+        </span>
+        @Html.HiddenFor( t => t.CategoryId )
+    }
+</div>

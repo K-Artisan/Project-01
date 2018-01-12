@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+  <variables>
+    <add key="ConnectionString1" value="Data Source=.\sql2012;Initial Catalog=Application;Integrated Security=True" />
+  </variables>
+  <propertySets>
+    <propertySet name="Entity" template="01-Templates\Entity.cst">
+      <property name="TableNaming">Plural</property>
+      <property name="EntityNaming">Singular</property>
+      <property name="RelationshipNaming">Plural</property>
+      <property name="ContextNaming">Plural</property>
+      <property name="IgnoreList">
+        <stringList>
+      <string>sysdiagrams$</string>
+    </stringList>
+      </property>
+      <property name="InclusionMode">False</property>
+      <property name="CleanExpressions">
+        <stringList>
+      <string>^(sp|tbl|udf|vw)_</string>
+    </stringList>
+      </property>
+      <property name="Database">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+      </property>
+      <property name="Namespace">Applications</property>
+      <property name="DbName">.</property>
+    </propertySet>
+  </propertySets>
+</codeSmith>
